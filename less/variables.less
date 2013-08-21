@@ -2,9 +2,68 @@
 // Variables
 // --------------------------------------------------
 
+/*font choices 1:
+<http://www.google.com/fonts/#ChoosePlace:select/Collection:Lekton|Permanent+Marker|Sue+Ellen+Francisco|Give+You+Glory|PT+Sans+Narrow|La+Belle+Aurore|Yesteryear|Gochi+Hand|Schoolbell|Source+Code+Pro|Asap|Grand+Hotel|Roboto+Slab|Roboto+Condensed|Open+Sans+Condensed:300|Passion+One|Archivo+Black|Montserrat|Oswald:400,700,300|Raleway|Inconsolata|Titillium+Web|Chivo|Fjalla+One|Raleway+Dots|PT+Sans+Caption|Rock+Salt|Covered+By+Your+Grace|Pacifico|Cedarville+Cursive|Satisfy|Kaushan+Script|Roboto>
+
+embed all of them:
+<http://www.google.com/fonts/#UsePlace:use/Collection:Lekton:400,700,400italic|Permanent+Marker|Sue+Ellen+Francisco|Give+You+Glory|PT+Sans+Narrow:400,700|La+Belle+Aurore|Yesteryear|Gochi+Hand|Schoolbell|Source+Code+Pro:200,300,400,500,600,700,900|Asap:400,700,700italic,400italic|Grand+Hotel|Roboto+Slab:400,700,300,100|Roboto+Condensed:300italic,400italic,700italic,400,700,300|Open+Sans+Condensed:300,700,300italic|Passion+One:400,700,900|Archivo+Black|Montserrat:400,700|Oswald:400,700,300|Raleway:400,300,500,600,700,800,900,200,100|Inconsolata:400,700|Titillium+Web:400,200,300,900,700italic,700,600italic,600,400italic,300italic,200italic|Chivo:400,900italic,900,400italic|Fjalla+One|Raleway+Dots|PT+Sans+Caption:400,700|Rock+Salt|Covered+By+Your+Grace|Pacifico|Cedarville+Cursive|Satisfy|Kaushan+Script|Roboto:400,100,100italic,300italic,300,400italic,500,500italic,700,700italic,900,900italic>
+
+@import url(http://fonts.googleapis.com/css?family=Lekton:400,700,400italic|Permanent+Marker|Sue+Ellen+Francisco|Give+You+Glory|PT+Sans+Narrow:400,700|La+Belle+Aurore|Yesteryear|Gochi+Hand|Schoolbell|Source+Code+Pro:200,300,400,500,600,700,900|Asap:400,700,700italic,400italic|Grand+Hotel|Roboto+Slab:400,700,300,100|Roboto+Condensed:300italic,400italic,700italic,400,700,300|Open+Sans+Condensed:300,700,300italic|Passion+One:400,700,900|Archivo+Black|Montserrat:400,700|Oswald:400,700,300|Raleway:400,300,500,600,700,800,900,200,100|Inconsolata:400,700|Titillium+Web:400,200,300,900,700italic,700,600italic,600,400italic,300italic,200italic|Chivo:400,900italic,900,400italic|Fjalla+One|Raleway+Dots|PT+Sans+Caption:400,700|Rock+Salt|Covered+By+Your+Grace|Pacifico|Cedarville+Cursive|Satisfy|Kaushan+Script|Roboto:400,100,100italic,300italic,300,400italic,500,500italic,700,700italic,900,900italic);
+
+font-family: 'Lekton', sans-serif;
+font-family: 'Permanent Marker', cursive;
+font-family: 'Sue Ellen Francisco', cursive;
+font-family: 'Give You Glory', cursive;
+font-family: 'PT Sans Narrow', sans-serif;
+font-family: 'La Belle Aurore', cursive;
+font-family: 'Yesteryear', cursive;
+font-family: 'Gochi Hand', cursive;
+font-family: 'Schoolbell', cursive;
+font-family: 'Source Code Pro', sans-serif;
+font-family: 'Asap', sans-serif;
+font-family: 'Grand Hotel', cursive;
+font-family: 'Roboto Slab', serif;
+font-family: 'Roboto Condensed', sans-serif;
+font-family: 'Open Sans Condensed', sans-serif;
+font-family: 'Passion One', cursive;
+font-family: 'Archivo Black', sans-serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Oswald', sans-serif;
+font-family: 'Raleway', sans-serif;
+font-family: 'Inconsolata', sans-serif;
+font-family: 'Titillium Web', sans-serif;
+font-family: 'Chivo', sans-serif;
+font-family: 'Fjalla One', sans-serif;
+font-family: 'Raleway Dots', cursive;
+font-family: 'PT Sans Caption', sans-serif;
+font-family: 'Rock Salt', cursive;
+font-family: 'Covered By Your Grace', cursive;
+font-family: 'Pacifico', cursive;
+font-family: 'Cedarville Cursive', cursive;
+font-family: 'Satisfy', cursive;
+font-family: 'Kaushan Script', cursive;
+font-family: 'Roboto', sans-serif;
+
+font choices 2 - serif:
+<http://www.google.com/fonts/#ChoosePlace:select/Collection:Lekton|PT+Sans+Narrow|Source+Code+Pro|Asap|Roboto+Slab|Roboto+Condensed|Open+Sans+Condensed:300|Passion+One|Archivo+Black|Montserrat|Oswald:400,700,300|Raleway|Inconsolata|Titillium+Web|Chivo|Fjalla+One|Raleway+Dots|PT+Sans+Caption|Roboto>
+
+font choices 2 - script:
+http://www.google.com/fonts/#ChoosePlace:select/Collection:Permanent+Marker|Sue+Ellen+Francisco|Give+You+Glory|La+Belle+Aurore|Yesteryear|Gochi+Hand|Schoolbell|Grand+Hotel|Archivo+Black|Rock+Salt|Covered+By+Your+Grace|Pacifico|Cedarville+Cursive|Satisfy|Kaushan+Script
+*/
 
 // Global values
 // --------------------------------------------------
+
+
+// Freifunk 
+// -------------------------
+
+@ff-Y: #ffb400;
+@ff-M: #dc0067;
+@ff-C: #009ee0;
+@ff-K: @gray-dark; // #333
+@ff-font: 'Roboto Condensed';
+
 
 // Grays
 // -------------------------
@@ -18,7 +77,7 @@
 // Brand colors
 // -------------------------
 
-@brand-primary:         #428bca;
+@brand-primary:         @ff-M;
 @brand-success:         #5cb85c;
 @brand-warning:         #f0ad4e;
 @brand-danger:          #d9534f;
@@ -27,8 +86,8 @@
 // Scaffolding
 // -------------------------
 
-@body-bg:               #fff;
-@text-color:            @gray-dark;
+@body-bg:               lighten(@ff-Y, 15%);
+@text-color:            @ff-K;
 
 // Links
 // -------------------------
@@ -39,12 +98,12 @@
 // Typography
 // -------------------------
 
-@font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif;
+@font-family-sans-serif:  @ff-font, "Helvetica Neue", Helvetica, Arial, sans-serif;
 @font-family-serif:       Georgia, "Times New Roman", Times, serif;
 @font-family-monospace:   Monaco, Menlo, Consolas, "Courier New", monospace;
 @font-family-base:        @font-family-sans-serif;
 
-@font-size-base:          14px;
+@font-size-base:          16px;
 @font-size-large:         ceil(@font-size-base * 1.25); // ~18px
 @font-size-small:         ceil(@font-size-base * 0.85); // ~12px
 
@@ -78,9 +137,9 @@
 @line-height-large:              1.33;
 @line-height-small:              1.5;
 
-@border-radius-base:             4px;
-@border-radius-large:            6px;
-@border-radius-small:            3px;
+@border-radius-base:             6px;
+@border-radius-large:            8px;
+@border-radius-small:            4px;
 
 @component-active-bg:            @brand-primary;
 
@@ -488,13 +547,13 @@
 
 // Panels
 // -------------------------
-@panel-bg:                    #fff;
-@panel-inner-border:          #ddd;
+@panel-bg:                    @body-bg;
+@panel-inner-border:          @ff-M;
 @panel-border-radius:         @border-radius-base;
 @panel-footer-bg:             #f5f5f5;
 
 @panel-default-text:          @gray-dark;
-@panel-default-border:        #ddd;
+@panel-default-border:        @ff-M;
 @panel-default-heading-bg:    #f5f5f5;
 
 @panel-primary-text:          #fff;
