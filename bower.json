@@ -1,6 +1,6 @@
 {
-  "name": "bootstrap-theme-themestrap",
-  "version": "0.3.0",
+  "name": "bootstrap-theme-freifunk",
+  "version": "0.0.1",
   "main": "dist/bootstrap.css",
   "ignore": [
     "**/.*",
