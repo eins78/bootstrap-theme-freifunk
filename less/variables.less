@@ -55,17 +55,25 @@ http://www.google.com/fonts/#ChoosePlace:select/Collection:Permanent+Marker|Sue+
 // --------------------------------------------------
 
 
-// Freifunk 
+// Freifunk CI
 // -------------------------
 
-@ff-Y: #ffb400;
-@ff-M: #dc0067;
-@ff-C: #009ee0;
-@ff-K: @gray-dark; // #333
-@ff-mainfont: 'Roboto Condensed';
+/* original logo font is "Swiss-911 Extra-compressed" */
+/* the closest open source is "Oswald" */
 @ff-headfont: 'Oswald';
+
+/* for body text "Roboto Condensed": matches, but is more readable */
+@ff-mainfont: 'Roboto Condensed';
+
+/* very stylized monospace fonts, also slightly condensed */
 @ff-monofont: 'Lekton';
 
+/* official colors from Freifunk 
+   <http://wiki.freifunk.net/Freifunk-Styles#Freifunk-Farben>  */
+@ff-Y: #ffb400;    // "official"
+@ff-M: #dc0067;    // "official"
+@ff-C: #009ee0;    // "official"
+@ff-K: @gray-dark; // #333
 
 // Grays
 // -------------------------
