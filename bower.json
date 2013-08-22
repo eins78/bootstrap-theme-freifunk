@@ -1,7 +1,10 @@
 {
   "name": "bootstrap-theme-freifunk",
   "version": "0.0.2",
-  "main": "dist/bootstrap.css",
+  "main": [
+    "dist/bootstrap.min.css",
+    "images/wolke.min.png"
+  ],
   "ignore": [
     "**/.*",
     "node_modules",
