@@ -29,8 +29,33 @@
 
 /* - BORDERS - */
 
+.list-group-item {
+/*    border-width: 3px;*/
+}
+
+.panel > .list-group .list-group-item {
+/*  border-width: 2px 0;*/
+}
+
+
 .page-header {
   border-bottom-width: 3px;
+}
+
+/* ALERTS*/
+.alert {
+  border-width: 3px;
+  border-color: @ff-Md;
+}
+.close {
+  .opacity(.75);
+
+  &:hover,
+  &:focus {
+
+    .opacity(1.0);
+  }
+
 }
 
 /* - PANELS - */
@@ -42,5 +67,60 @@
   .panel-heading {
     border-top-right-radius: 2px;
     border-top-left-radius: 2px;
+  }
+}
+
+.panel-heading {
+  border-bottom-width: 3px;
+}
+.panel-footer {
+  border-top-width: 3px;
+}
+.panel-default > .panel-heading {
+/*  color: @panel-default-border;*/
+}
+
+/* TABLES */
+.table {
+  // Cells
+  thead,
+  tbody,
+  tfoot {
+    > tr {
+      > th,
+      > td {
+        border-top: 2px solid @table-border-color;
+      }
+    }
+  }
+  // Bottom align for column headings
+  thead > tr > th {
+    border-bottom: 3px solid @table-border-color;
+  }
+  // Account for multiple tbody instances
+  tbody + tbody {
+    border-top: 2px solid @table-border-color;
+  }
+}
+
+.table-bordered {
+  border: 3px solid @table-border-color;
+  > thead,
+  > tbody,
+  > tfoot {
+    > tr {
+      > th,
+      > td {
+        border: 2px solid @table-border-color;
+      }
+    }
+  }
+  > thead {
+    > tr {
+      > th,
+      > td {
+        border-bottom-width: 3px;
+      }
+    }
   }
 }
