@@ -9,9 +9,7 @@
 <meta name="description" content="Weimarnetz Freifunk Initiative">
 <meta name="author" content="Weimarnetz e.V." >
 
-<!-- Le styles -->
-<link href="../dist/css/bootstrap.min.css" rel="stylesheet">
-
+  <link href="../dist/css/bootstrap.min.css" rel="stylesheet"> 
 
 <!-- local fixes. TODO @theme -->
 <style type="text/css">
@@ -40,7 +38,7 @@
   
   </head>
 
-  <body>
+  <body id="home" class="fixed-nav">
 
     
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -116,23 +114,21 @@
     </div></noscript>
     
     <!-- log-in-alert for testing-->
-    <!--
-    <div class="alert jumbotron alert-success alert-dismissable">
+    <div class="alert jumbotron alert-unlock alert-success alert-dismissable">
       <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
       <div class="container">
         <h2>Dein Internetzugang wurde erfolgreich freigeschaltet</h2>
-        <p>Den Internetzugang stellt Dir dieser <a href='http://", $gwip, "/cgi-bin/luci/freifunk/contact'>freundliche Nachbar bereit</a></p>
+        <p>Den Internetzugang stellt Dir <a href='http://", $gwip, "/cgi-bin/luci/freifunk/contact'>dieser freundliche Nachbar</a> bereit</p>
       </div>
     </div>
+    <!--
      -->
-     
-     
 
     <!-- grosses startseitenbanner -->
-    <div class="jumbotron">
+    <div id="banner" class="jumbotron jumbotron-special">
       <div class="container">
         <h1>Willkommen im Weimarnetz</h1>
-        <p>Freifunk in Weimar &mdash; Das freie B&uuml;rger-WLAN!</p>
+        <p class="lead">Freifunk in Weimar &mdash; Das freie B&uuml;rger-WLAN!</p>
         <p>
           <a class="btn btn-primary btn-lg" href="http://wireless.subsignal.org/index.php?title=Schnelleinstieg">Jetzt Mitfunken &raquo;</a>
           <a class="btn btn-warning btn-lg" href="/contact.php">Hilfe bekommen &raquo;</a>
@@ -154,7 +150,7 @@
     
             <!-- ein halber block (12/6=1/2) -->
             <div class="col-sm-6">
-              <h2>Aktuelle Meldungen</h2>
+              <h2 class="page-header">Aktuelle Meldungen</h2>
               <!-- dyn: news-liste -->
               <ul><li> 20. Jun 13 - Neue <a target=_blank href="http://map.weimarnetz.de" class="external text" rel="nofollow">Karte</a> aufgebaut, sie soll mit anderen Freifunkcommunities synchonisiert werden
 </li><li> 6. Jun 13 - Unser neue <a target=_blank href="http://reg.weimarnetz.de" class="external text" rel="nofollow">Registrator</a> ist fertig und mit dem <a target=_blank href="http://meshkit.ja.ishalt.so" class="external text" rel="nofollow">Meshkit</a> verbunden
@@ -165,7 +161,7 @@
     
             <!-- ein halber block (12/6=1/2) -->
             <div class="col-sm-6">
-              <h2>Aktuelle Diskussionen</h2>
+              <h2 class="page-header">Aktuelle Diskussionen</h2>
               <p>
                 <!-- dyn: discuss-liste -->
                 
@@ -187,7 +183,7 @@
           <div class="row">
 
             <div class="col-sm-6">
-              <h2>Spendenaufruf</h2>
+              <h2 class="page-header">Spendenaufruf</h2>
               <!-- dyn: spenden-liste -->
               <ul><li> Das Weimarnetz ist auf Deine Spende angwiesen.
 </li><li> Als Spendenbetrag hat sich 5 Euro pro Person und Monat eingebürgert.
@@ -212,9 +208,9 @@
         </div> <!-- ende content -->
     
         <div class="col-sm-1">
-          <h2><small class="text-muted">Werbung</small></h2>
+          <h2 class="page-header"><small class="text-muted">Werbung</small></h2>
           <!-- mindfactory banner -->
-          <img src="img/Banner/120x500_mindfactory_hardware.jpg" width="120" height="500" alt="Ihre Hardware stößt an ihre Grenzen? Zeit für ein Upgrade! www.mindfactory.de" usemap="#admap" />
+          <img src="holder.js/120x500" width="120" height="500" alt="Ihre Hardware stößt an ihre Grenzen? Zeit für ein Upgrade! www.mindfactory.de" usemap="#admap" />
           <map name="admap">
             <!-- #$-:Image map file created by GIMP Image Map plug-in -->
             <!-- #$-:GIMP Image Map plug-in by Maurits Rijk -->
@@ -231,7 +227,7 @@
   <hr>
   <div class="col-sm-2">
     <p>
-      <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/de/"><img alt="Creative Commons Lizenzvertrag" style="border-width:0" src="img/cc.png" /></a>
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/de/"><img alt="Creative Commons Lizenzvertrag"  data-src="holder.js/100x60" /></a>
     </p>
   </div>
   <div class="col-sm-10">
@@ -249,7 +245,8 @@
     <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<script src="../assets/js/jquery.js"></script>
-<script src="b../dist/js/bootstrap.min.js"></script>
+<script src="../bower_components/bootstrap/assets/js/jquery.js"></script>
+<script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="../bower_components/bootstrap/assets/js/holder.js"></script>
   </body>
 </html>
