@@ -20,21 +20,10 @@
 // Freifunk CI
 // -------------------------
 
-/* CLOUDY JUMBOTRON */
 /* original logo font is "Swiss-911 Extra-compressed" */
 /* the closest open source is "Oswald" */
 @ff-headfont: 'Oswald';
 
-.jumbotron {
-  background-image: url(/images/wolke.min.png);
-  background-size: 300% auto;
-  background-position: 50% 50%
-}
-@media (min-width: 768px) {
-  .jumbotron {
-    background-size: 100% auto;
-  }
-  
 /* for body text "Roboto Condensed": matches, but is more readable */
 @ff-mainfont: 'Roboto Condensed';
 
@@ -77,14 +66,41 @@
 @ff-Cddd: darken(@ff-C, 25%);
 
 
+
+/* TYPO */
+.container div {
+/*  background-color: @body-bg;*/
 }
 
-.jumbotron p {
+.ff-script {
   font-family: 'Permanent Marker', cursive;
 }
 
+p.lead {
+  .ff-script;
+  font-size: 1.2em;
+  color: @ff-Md;
+}
+
+ol, ul {
+  padding-left: 1em;
+}
+
+
 .navbar-brand {
   font-family: @headings-font-family;
+}
+
+/* LAYOUT */
+
+/* space out buttons inside jumbotrons */
+.jumbotron {
+  .btn {
+    margin: 0.5em 0.5em 0 0;  }
+}
+
+footer {
+  margin-top: 3em;
 }
 
 /* - BORDERS - */
@@ -107,7 +123,9 @@
   border-width: 3px;
   border-color: @ff-Md;
 }
-.close {
+.close,
+.alert > .close {
+  color: @ff-Md;
   .opacity(.75);
 
   &:hover,
@@ -117,6 +135,7 @@
   }
 
 }
+
 
 /* - PANELS - */
 
@@ -184,3 +203,57 @@
     }
   }
 }
+
+/* --- SPECIALS --- */
+
+/* set class 'fixed-nav' on body to adjust for fixed navbar */
+body.fixed-nav {
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+
+
+/* CLOUDS!
+   - body
+   - SPECIAL JUMBOTRON 
+   - unlock alert
+*/
+.cloudy {
+  background-image: url(/images/wolke.min.png);
+  background-size: 300% auto;
+  background-position: 50% 50%;
+  background-attachment: fixed;
+}
+body, 
+.alert-unlock, 
+.jumbotron.jumbotron-special {
+  .cloudy;
+}
+
+@media (min-width: 768px) {
+  .cloudy, 
+  body, 
+  .alert-unlock, 
+  .jumbotron.jumbotron-special {
+    background-size: 125% auto;
+  }
+}
+
+.jumbotron.jumbotron-special {
+  .btn {
+    .ff-script;
+  }
+}
+
+/* unlock alert */
+.alert-unlock {
+  border-width: 0 0 3px 0;
+  border-color: @alert-success-text;
+  border-radius: 0;
+  margin-bottom: 0;
+  
+  p {
+    .ff-script;
+  }
+}
+
