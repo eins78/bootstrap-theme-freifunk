@@ -75,6 +75,32 @@ http://www.google.com/fonts/#ChoosePlace:select/Collection:Permanent+Marker|Sue+
 @ff-C: #009ee0;    // "official"
 @ff-K: @gray-dark; // #333
 
+/* make lighter and darker tones */
+@ff-Yl: lighten(@ff-Y, 10%);
+@ff-Ml: lighten(@ff-M, 10%);
+@ff-Cl: lighten(@ff-C, 10%);
+
+@ff-Yll: lighten(@ff-Y, 15%);
+@ff-Mll: lighten(@ff-M, 15%);
+@ff-Cll: lighten(@ff-C, 15%);
+
+@ff-Ylll: lighten(@ff-Y, 25%);
+@ff-Mlll: lighten(@ff-M, 25%);
+@ff-Clll: lighten(@ff-C, 25%);
+
+@ff-Yd: darken(@ff-Y, 10%);
+@ff-Md: darken(@ff-M, 10%);
+@ff-Cd: darken(@ff-C, 10%);
+
+@ff-Ydd: darken(@ff-Y, 15%);
+@ff-Mdd: darken(@ff-M, 15%);
+@ff-Cdd: darken(@ff-C, 15%);
+
+@ff-Yddd: darken(@ff-Y, 25%);
+@ff-Mddd: darken(@ff-M, 25%);
+@ff-Cddd: darken(@ff-C, 25%);
+
+
 // Grays
 // -------------------------
 
@@ -96,7 +122,7 @@ http://www.google.com/fonts/#ChoosePlace:select/Collection:Permanent+Marker|Sue+
 // Scaffolding
 // -------------------------
 
-@body-bg:               lighten(@ff-Y, 15%);
+@body-bg:               @ff-Ylll;
 @text-color:            @ff-K;
 
 // Links
@@ -162,12 +188,12 @@ http://www.google.com/fonts/#ChoosePlace:select/Collection:Permanent+Marker|Sue+
 @table-cell-padding:                 8px;
 @table-condensed-cell-padding:       5px;
 
-@table-bg:                           transparent; // overall background-color
-@table-bg-accent:                    #f9f9f9; // for striping
-@table-bg-hover:                     #f5f5f5;
+@table-bg:                           @body-bg; // overall background-color
+@table-bg-accent:                    lighten(@body-bg, 10%); // for striping
+@table-bg-hover:                     lighten(@body-bg, 10%);
 @table-bg-active:                    @table-bg-hover;
 
-@table-border-color:                 #ddd; // table and cell border
+@table-border-color:                 @ff-Md; // table and cell border
 
 
 // Buttons
@@ -179,23 +205,23 @@ http://www.google.com/fonts/#ChoosePlace:select/Collection:Permanent+Marker|Sue+
 @btn-default-bg:                 #fff;
 @btn-default-border:             #ccc;
 
-@btn-primary-color:              #fff;
+@btn-primary-color:              mix(@btn-primary-bg, #fff, 5%);
 @btn-primary-bg:                 @brand-primary;
 @btn-primary-border:             darken(@btn-primary-bg, 5%);
 
-@btn-success-color:              #fff;
+@btn-success-color:              mix(@btn-success-bg, #fff, 5%);
 @btn-success-bg:                 @brand-success;
 @btn-success-border:             darken(@btn-success-bg, 5%);
 
-@btn-warning-color:              #fff;
+@btn-warning-color:              mix(@btn-warning-bg, #fff, 5%);
 @btn-warning-bg:                 @brand-warning;
 @btn-warning-border:             darken(@btn-warning-bg, 5%);
 
-@btn-danger-color:               #fff;
+@btn-danger-color:               mix(@btn-danger-bg, #fff, 5%);
 @btn-danger-bg:                  @brand-danger;
 @btn-danger-border:              darken(@btn-danger-bg, 5%);
 
-@btn-info-color:                 #fff;
+@btn-info-color:                 mix(@btn-info-bg, #fff, 5%);
 @btn-info-bg:                    @brand-info;
 @btn-info-border:                darken(@btn-info-bg, 5%);
 
@@ -205,10 +231,10 @@ http://www.google.com/fonts/#ChoosePlace:select/Collection:Permanent+Marker|Sue+
 // Forms
 // -------------------------
 
-@input-bg:                       lighten(@ff-Y, 30%);
+@input-bg:                       lighten(@body-bg, 10%);
 @input-bg-disabled:              @ff-Y;
 
-@input-color:                    darken(@ff-M, 10%);
+@input-color:                    @ff-Md;
 @input-border:                   @ff-Y;
 @input-border-radius:            @border-radius-base;
 @input-border-focus:             @ff-M;
@@ -220,7 +246,7 @@ http://www.google.com/fonts/#ChoosePlace:select/Collection:Permanent+Marker|Sue+
 @input-height-small:             (floor(@font-size-small * @line-height-small) + (@padding-small-vertical * 2) + 2);
 
 @legend-color:                   @gray-dark;
-@legend-border-color:            darken(@ff-M, 10%);
+@legend-border-color:            @ff-Md;
 
 @input-group-addon-bg:           @gray-lighter;
 @input-group-addon-border-color: @input-border;
@@ -309,27 +335,27 @@ http://www.google.com/fonts/#ChoosePlace:select/Collection:Permanent+Marker|Sue+
 @navbar-margin-bottom:             @line-height-computed;
 @navbar-default-color:             @ff-K;
 @navbar-default-bg:                @ff-Y;
-@navbar-default-border:            darken(@ff-M, 10%);
+@navbar-default-border:            @ff-Md;
 @navbar-border-radius:             @border-radius-base;
 @navbar-padding-horizontal:        floor(@grid-gutter-width / 2);
 @navbar-padding-vertical:          ((@navbar-height - @line-height-computed) / 2);
 
 // Navbar links
 @navbar-default-link-color:                @ff-M;
-@navbar-default-link-hover-color:          darken(@ff-M, 15%);
-@navbar-default-link-hover-bg:             lighten(@ff-Y, 15%);
-@navbar-default-link-active-color:         darken(@ff-M, 15%);
+@navbar-default-link-hover-color:          @ff-Mdd;
+@navbar-default-link-hover-bg:             @ff-Yll;
+@navbar-default-link-active-color:         @ff-Mdd;
 @navbar-default-link-active-bg: lighten(@navbar-default-bg, 25%);
 @navbar-default-link-disabled-color:       #ccc;
 @navbar-default-link-disabled-bg:          transparent;
 
 // Navbar brand label
-@navbar-default-brand-color: darken(@ff-M, 10%);
+@navbar-default-brand-color:                @ff-Md;
 @navbar-default-brand-hover-color:         lighten(@navbar-default-brand-color, 10%);
 @navbar-default-brand-hover-bg:            transparent;
 
 // Navbar toggle
-@navbar-default-toggle-hover-bg:           lighten(@ff-Y, 15%);
+@navbar-default-toggle-hover-bg:           @ff-Yll;
 @navbar-default-toggle-icon-bar-bg:        @ff-M;
 @navbar-default-toggle-border-color:       @ff-M;
 
@@ -337,9 +363,9 @@ http://www.google.com/fonts/#ChoosePlace:select/Collection:Permanent+Marker|Sue+
 // Inverted navbar
 //
 // Reset inverted navbar basics
-@navbar-inverse-color:                      lighten(@ff-Y, 25%);
-@navbar-inverse-bg:                         darken(@ff-M, 25%);
-@navbar-inverse-border: @ff-Y;
+@navbar-inverse-color:                      @ff-Ylll;
+@navbar-inverse-bg:                         @ff-Mddd;
+@navbar-inverse-border:                     @ff-Y;
 
 // Inverted navbar links
 @navbar-inverse-link-color:                 @ff-Y;
@@ -423,7 +449,7 @@ http://www.google.com/fonts/#ChoosePlace:select/Collection:Permanent+Marker|Sue+
 
 @jumbotron-padding:              30px;
 @jumbotron-color:                inherit;
-@jumbotron-bg:                   hsl(hue(@ff-C), 100%, lightness(@gray-lighter));
+@jumbotron-bg:                   hsl(hue(@ff-C), saturation(@body-bg), lightness(@body-bg));
 
 @jumbotron-heading-color:        inherit;
 
@@ -560,30 +586,30 @@ http://www.google.com/fonts/#ChoosePlace:select/Collection:Permanent+Marker|Sue+
 @panel-bg:                    @body-bg;
 @panel-inner-border:          @ff-M;
 @panel-border-radius:         @border-radius-base;
-@panel-footer-bg:             #f5f5f5;
+@panel-footer-bg:             @ff-Y;
 
 @panel-default-text:          @gray-dark;
 @panel-default-border:        @ff-M;
-@panel-default-heading-bg:    #f5f5f5;
+@panel-default-heading-bg:    @ff-Y;
 
 @panel-primary-text:          #fff;
-@panel-primary-border:        @brand-primary;
+@panel-primary-border:        @panel-default-border;
 @panel-primary-heading-bg:    @brand-primary;
 
 @panel-success-text:          @state-success-text;
-@panel-success-border:        @state-success-border;
+@panel-success-border:        @panel-default-border;
 @panel-success-heading-bg:    @state-success-bg;
 
 @panel-warning-text:          @state-warning-text;
-@panel-warning-border:        @state-warning-border;
+@panel-warning-border:        @panel-default-border;
 @panel-warning-heading-bg:    @state-warning-bg;
 
 @panel-danger-text:           @state-danger-text;
-@panel-danger-border:         @state-danger-border;
+@panel-danger-border:         @panel-default-border;
 @panel-danger-heading-bg:     @state-danger-bg;
 
 @panel-info-text:             @state-info-text;
-@panel-info-border:           @state-info-border;
+@panel-info-border:           @panel-default-border;
 @panel-info-heading-bg:       @state-info-bg;
 
 
@@ -642,9 +668,9 @@ http://www.google.com/fonts/#ChoosePlace:select/Collection:Permanent+Marker|Sue+
 
 // Close
 // ------------------------
-@close-color:                 #000;
+@close-color:                 @ff-Md;
 @close-font-weight:           bold;
-@close-text-shadow:           0 1px 0 #fff;
+@close-text-shadow:           0 2px 0 @ff-Ml;
 
 
 // Code
@@ -660,17 +686,17 @@ http://www.google.com/fonts/#ChoosePlace:select/Collection:Permanent+Marker|Sue+
 // Type
 // ------------------------
 @text-muted:                  mix(@ff-M, @ff-Y, 33%);
-@abbr-border-color:           darken(@ff-M, 10%);
+@abbr-border-color:           @ff-Md;
 @headings-small-color:        @text-muted;
 @blockquote-small-color:      @text-muted;
-@blockquote-border-color:     darken(@ff-M, 10%);
-@page-header-border-color:    darken(@ff-M, 10%);
+@blockquote-border-color:     @ff-Md;
+@page-header-border-color:    @ff-Md;
 
 // Miscellaneous
 // -------------------------
 
 // Hr border color
-@hr-border:                   darken(@ff-M, 10%);
+@hr-border:                   @ff-Md;
 
 // Horizontal forms & lists
 @component-offset-horizontal: 180px;
