@@ -6438,7 +6438,7 @@ body.fixed-nav {
    - unlock alert
 */
 .cloudy {
-  background-image: url(/images/wolke.min.png);
+  background-image: url(../../images/wolke.min.png);
   background-size: 300% auto;
   background-position: 50% 50%;
   background-attachment: fixed;
@@ -6446,7 +6446,7 @@ body.fixed-nav {
 body,
 .alert-unlock,
 .jumbotron.jumbotron-special {
-  background-image: url(/images/wolke.min.png);
+  background-image: url(../../images/wolke.min.png);
   background-size: 300% auto;
   background-position: 50% 50%;
   background-attachment: fixed;
