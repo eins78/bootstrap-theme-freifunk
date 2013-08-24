@@ -1,6 +1,6 @@
 {
   "name": "bootstrap-theme-freifunk",
-  "version": "0.0.3-2",
+  "version": "0.0.4",
   "main": [
     "dist/bootstrap.min.css",
     "images/wolke.min.png"

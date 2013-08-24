@@ -6310,6 +6310,9 @@ td.visible-print {
     display: none !important;
   }
 }
+/* font awesome */
+/*@import "../bower_components/font-awesome/less/font-awesome.less";
+*/
 /* original logo font is "Swiss-911 Extra-compressed" */
 /* the closest open source is "Oswald" */
 /* for body text "Roboto Condensed": matches, but is more readable */
@@ -6319,17 +6322,20 @@ td.visible-print {
    <http://wiki.freifunk.net/Freifunk-Styles#Freifunk-Farben>  */
 /* make lighter and darker tones */
 /* TYPO */
-.container div {
-  /*  background-color: @body-bg;*/
-
-}
 .ff-script {
   font-family: 'Permanent Marker', cursive;
+}
+.jumbotron h1,
+.jumbotron .h1 {
+  color: #a9004f;
+}
+a[class$="-brand"] {
+  font-weight: 700;
+  color: red;
 }
 p.lead {
   font-family: 'Permanent Marker', cursive;
   font-size: 1.2em;
-  color: #a9004f;
 }
 ol,
 ul {
@@ -6396,6 +6402,9 @@ footer {
   /*  color: @panel-default-border;*/
 
 }
+.panel-center {
+  text-align: center;
+}
 /* TABLES */
 .table thead > tr > th,
 .table tbody > tr > th,
@@ -6426,25 +6435,72 @@ footer {
 .table-bordered > thead > tr > td {
   border-bottom-width: 3px;
 }
-/* --- SPECIALS --- */
+/* --- THEME SPECIALS --- */
 /* set class 'fixed-nav' on body to adjust for fixed navbar */
 body.fixed-nav {
   padding-top: 50px;
   padding-bottom: 20px;
 }
-/* CLOUDS!
-   - body
-   - SPECIAL JUMBOTRON 
-   - unlock alert
+/*.jumbotron.jumbotron-special {
+  .btn {
+    .ff-script;
+  }
+}
 */
-.cloudy {
+/* TOP alerts, directly after navbar */
+.navbar + .alert {
+  padding: 30px;
+  margin-bottom: 30px;
+  font-size: 24px;
+  font-weight: 200;
+  line-height: 2.1428571435;
+  color: inherit;
+  background-color: #80d9ff;
   background-image: url(../../images/wolke.min.png);
   background-size: 300% auto;
   background-position: 50% 50%;
   background-attachment: fixed;
+  border-width: 0 0 3px 0;
+  border-color: #468847;
+  border-radius: 0;
+  margin-bottom: 0;
 }
-.alert-unlock,
-.jumbotron.jumbotron-special {
+.navbar + .alert h1 {
+  line-height: 1;
+  color: inherit;
+}
+.navbar + .alert p {
+  line-height: 1.4;
+}
+.container .navbar + .alert {
+  border-radius: 8px;
+}
+@media screen and (min-width: 768px) {
+  .navbar + .alert {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+  .container .navbar + .alert {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+  .navbar + .alert h1 {
+    font-size: 72px;
+  }
+}
+.navbar + .alert h1,
+.navbar + .alert .h1 {
+  color: #a9004f;
+}
+.navbar + .alert .btn {
+  margin: 0.5em 0.5em 0 0;
+}
+/* CLOUDS!
+   - JUMBOTRONs
+   - TOP ALERTS           */
+.cloudy,
+.alert-top,
+.jumbotron {
   background-image: url(../../images/wolke.min.png);
   background-size: 300% auto;
   background-position: 50% 50%;
@@ -6452,21 +6508,15 @@ body.fixed-nav {
 }
 @media (min-width: 768px) {
   .cloudy,
-  .alert-unlock,
-  .jumbotron.jumbotron-special {
+  .alert-top,
+  .jumbotron {
     background-size: 125% auto;
   }
 }
-.jumbotron.jumbotron-special .btn {
-  font-family: 'Permanent Marker', cursive;
+.navbar + .alert {
+  background-image: url(../../images/wolke.min.png);
+  background-size: 300% auto;
+  background-position: 50% 50%;
+  background-attachment: fixed;
 }
-/* unlock alert */
-.alert-unlock {
-  border-width: 0 0 3px 0;
-  border-color: #468847;
-  border-radius: 0;
-  margin-bottom: 0;
-}
-.alert-unlock p {
-  font-family: 'Permanent Marker', cursive;
-}
+/* ------- */
