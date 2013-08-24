@@ -159,6 +159,10 @@ footer {
 /*  color: @panel-default-border;*/
 }
 
+.panel-center {
+  text-align: center;
+}
+
 /* TABLES */
 .table {
   // Cells
@@ -204,7 +208,7 @@ footer {
   }
 }
 
-/* --- SPECIALS --- */
+/* --- THEME SPECIALS --- */
 
 /* set class 'fixed-nav' on body to adjust for fixed navbar */
 body.fixed-nav {
@@ -212,46 +216,43 @@ body.fixed-nav {
   padding-bottom: 20px;
 }
 
+/*.jumbotron.jumbotron-special {
+  .btn {
+    .ff-script;
+  }
+}
+*/
+
+/* TOP alerts, directly after navbar */
+.navbar + .alert,  {
+  .jumbotron;
+  border-width: 0 0 3px 0;
+  border-color: @alert-success-text;
+  border-radius: 0;
+  margin-bottom: 0;
+}
 
 /* CLOUDS!
-   - body
-   - SPECIAL JUMBOTRON 
-   - unlock alert
-*/
-.cloudy {
+   - JUMBOTRONs
+   - TOP ALERTS           */
+.cloudy,
+.alert-top, 
+.jumbotron {
   background-image: url(../../images/wolke.min.png);
   background-size: 300% auto;
   background-position: 50% 50%;
   background-attachment: fixed;
 }
-.alert-unlock, 
-.jumbotron.jumbotron-special {
-  .cloudy;
-}
 
 @media (min-width: 768px) {
   .cloudy, 
-  .alert-unlock, 
-  .jumbotron.jumbotron-special {
+  .alert-top, 
+  .jumbotron {
     background-size: 125% auto;
   }
 }
 
-.jumbotron.jumbotron-special {
-  .btn {
-    .ff-script;
-  }
+.navbar + .alert {
+  .alert-top;
 }
-
-/* unlock alert */
-.alert-unlock {
-  border-width: 0 0 3px 0;
-  border-color: @alert-success-text;
-  border-radius: 0;
-  margin-bottom: 0;
-  
-  p {
-    .ff-script;
-  }
-}
-
+/* ------- */
