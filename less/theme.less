@@ -58,13 +58,16 @@ http://www.google.com/fonts/#ChoosePlace:select/Collection:Permanent+Marker|Sue+
 http://www.google.com/fonts/#ChoosePlace:select/Collection:Pacifico*/
 
 /*TMP*/
-@import url(http://fonts.googleapis.com/css?family=Lekton:400,700,400italic|Permanent+Marker|Roboto+Condensed:300italic,400italic,700italic,400,700,300|Oswald:400,700);
+@import url(http://fonts.googleapis.com/css?family=Lekton:400,700,400italic|Permanent+Marker|Roboto+Condensed:300italic,400italic,700italic,400,700,300|Oswald:400,700|Pacifico);
 /*TMP*/
 
 /* import bootstrap-default theme for gradients */
 @import "../bower_components/bootstrap/less/theme.less";
 @import "bootstrap.less";
 
+/* font awesome */
+/*@import "../bower_components/font-awesome/less/font-awesome.less";
+*/
 // Freifunk CI
 // -------------------------
 
@@ -76,7 +79,7 @@ http://www.google.com/fonts/#ChoosePlace:select/Collection:Pacifico*/
 @ff-mainfont: 'Roboto Condensed';
 
 /* and a friendly handwritten font for specials */
-@ff-scriptfont: 'Permanent Marker';
+@ff-scriptfont: 'Pacifico';
 
 /* very stylized monospace fonts, also slightly condensed */
 @ff-monofont: 'Lekton';
@@ -117,7 +120,7 @@ http://www.google.com/fonts/#ChoosePlace:select/Collection:Pacifico*/
 
 /* TYPO */
 .ff-script {
-  font-family: 'Permanent Marker', cursive;
+  font-family: @ff-scriptfont, cursive;
 }
 
 .jumbotron {
