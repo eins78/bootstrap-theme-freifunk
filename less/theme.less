@@ -280,15 +280,6 @@ body.fixed-nav {
 }
 */
 
-/* TOP alerts, directly after navbar */
-.navbar + .alert,  {
-  .jumbotron;
-  border-width: 0 0 3px 0;
-  border-color: @alert-success-text;
-  border-radius: 0;
-  margin-bottom: 0;
-}
-
 /* CLOUDS!
    - JUMBOTRONs
    - TOP ALERTS           */
@@ -309,7 +300,22 @@ body.fixed-nav {
   }
 }
 
+/* TOP alerts, directly after navbar */
+.alert-top {
+  .jumbotron;
+  border-width: 0 0 3px 0;
+  border-radius: 0;
+  margin-bottom: 0;
+  
+  &.alert-success {
+    color: @alert-success-text;
+    background-color: @alert-success-bg;
+    border-color: @alert-success-text;
+  }
+}
+
 .navbar + .alert {
   .alert-top;
 }
+
 /* ------- */
