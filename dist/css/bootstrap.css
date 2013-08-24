@@ -6324,7 +6324,7 @@ td.visible-print {
 /* TYPO */
 .ff-script {
   font-family: 'Sue Ellen Francisco', cursive;
-  font-size: 1.8em;
+  font-size: 1.4em;
 }
 .jumbotron h1,
 .jumbotron .h1 {
@@ -6336,7 +6336,7 @@ a[class$="-brand"] {
 }
 p.lead {
   font-family: 'Sue Ellen Francisco', cursive;
-  font-size: 1.8em;
+  font-size: 1.4em;
 }
 ol,
 ul {
