@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Lekton:400,700,400italic|Permanent+Marker|Roboto+Condensed:300italic,400italic,700italic,400,700,300|Oswald:400,700|Pacifico);
+@import url(http://fonts.googleapis.com/css?family=Lekton:400,700,400italic|Permanent+Marker|Roboto+Condensed:300italic,400italic,700italic,400,700,300|Oswald:400,700|Pacifico|Sue+Ellen+Francisco);
 /*!
  * Freifunk (Bootstrap Theme)
  *
@@ -6323,7 +6323,8 @@ td.visible-print {
 /* make lighter and darker tones */
 /* TYPO */
 .ff-script {
-  font-family: 'Pacifico', cursive;
+  font-family: 'Sue Ellen Francisco', cursive;
+  font-size: 1.8em;
 }
 .jumbotron h1,
 .jumbotron .h1 {
@@ -6334,8 +6335,8 @@ a[class$="-brand"] {
   color: red;
 }
 p.lead {
-  font-family: 'Pacifico', cursive;
-  font-size: 1.2em;
+  font-family: 'Sue Ellen Francisco', cursive;
+  font-size: 1.8em;
 }
 ol,
 ul {
