@@ -1,118 +1,351 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-	"http://www.w3.org/TR/html4/loose.dtd">
-<HTML lang="de" dir="ltr"><HEAD>
-<TITLE>Weblogin : Captive portal : Splash screen : Internet : (cache)</TITLE>
-<META HTTP-EQUIV="cache-control" CONTENT="no-cache">
-<META HTTP-EQUIV="pragma" CONTENT="no-cache"> 
-<META HTTP-EQUIV="expires" CONTENT="0">
-<META HTTP-EQUIV="content-type" CONTENT="text/html; charset=ISO-8859-15">
-<LINK REL="shortcut icon" TYPE="image/x-icon" HREF="http://10.63.178.1/favicon.ico">
-<link href="../dist/css/bootstrap.min.css" rel="stylesheet"> 
-</HEAD>
-<BODY BGCOLOR="#ffffff" TEXT="#000000">
-  
-  
-<header class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-  <div class="navbar-header">
-    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-      <span class="sr-only">Toggle navigation</span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-    </button>
-    <a class="navbar-brand active" href="/"><strong><kbd>ALi23</kbd></strong></a>
-  </div>
-  <!-- Collect the nav links, forms, and other content for toggling -->
-  <div class="collapse navbar-collapse navbar-ex1-collapse">
-    <ul class="nav navbar-nav">
-      <li>
-        <a href="/cgi-bin/luci/freifunk/index">Overview</a>
-      </li>
+<!DOCTYPE html>
+<html lang="de">
+ <head>
+  <meta charset="utf-8">
+  <title>hvf5 - Informationsseite - LuCI</title>
+  <!--[if lt IE 9]><script src="/luci-static/bootstrap/html5.js"></script><![endif]-->
+  <meta name="viewport" content="initial-scale=1.0">
+  <link rel="stylesheet" href="/luci-static/bootstrap/cascade.css">
+  <link rel="stylesheet" media="only screen and (max-device-width: 854px)" href="/luci-static/bootstrap/mobile.css" type="text/css" />
+  <link rel="shortcut icon" href="/luci-static/bootstrap/favicon.ico">
+  <script src="/luci-static/resources/xhr.js"></script>
+ </head>
 
-      <li>
-        <a href="/cgi-bin/luci/freifunk/contact">Contact</a>
-      </li>
+ <body class="lang_deInformationsseite">
+  <header>
+   <div class="fill">
+    <div class="container">
+     <a class="brand" href="#">hvf5</a>
+     <ul class="nav">
+         <li>
+                <a href="/cgi-bin/luci/freifunk/captive">Informationsseite</a>
+        </li>
 
-      <li class="dropdown">
-        <a href="/wiki.php" class="dropdown-toggle" data-toggle="dropdown">Status <b class="caret"></b></a>
-        <ul class="dropdown-menu">
-          <li><a class="menu" href="/cgi-bin/luci/freifunk/status">Status</a></li>
+
+
+
+         <li>
+                <a href="/cgi-bin/luci/freifunk/index">Übersicht</a>
+        </li>
+
+
+
+
+         <li>
+                <a href="/cgi-bin/luci/freifunk/contact">Kontakt</a>
+        </li>
+
+
+
+
+        <li class="dropdown">
+            <a class="menu" href="/cgi-bin/luci/freifunk/status">Status</a>
+         <ul class="dropdown-menu">
           <li><a href="/cgi-bin/luci/freifunk/status/zeroes">Testdownload</a></li>
         </ul>
-      </li>
+        </li>
 
-      <li class="dropdown">
-        <a href="/cgi-bin/luci/freifunk/olsr" class="dropdown-toggle" data-toggle="dropdown">OLSR <b class="caret"></b></a>
-        <ul class="dropdown-menu">
-          <li><a class="menu" href="/cgi-bin/luci/freifunk/olsr">OLSR</a>
-          <li><a href="/cgi-bin/luci/freifunk/olsr/neighbors">Neighbours</a></li>
-          <li><a href="/cgi-bin/luci/freifunk/olsr/routes">Routes</a></li>
-          <li><a href="/cgi-bin/luci/freifunk/olsr/topology">Topology</a></li>
+
+        <li class="dropdown">
+            <a class="menu" href="/cgi-bin/luci/freifunk/olsr">OLSR</a>
+         <ul class="dropdown-menu">
+          <li><a href="/cgi-bin/luci/freifunk/olsr/neighbors">Nachbarn</a></li>
+          <li><a href="/cgi-bin/luci/freifunk/olsr/routes">Routen</a></li>
+          <li><a href="/cgi-bin/luci/freifunk/olsr/topology">Topologie</a></li>
           <li><a href="/cgi-bin/luci/freifunk/olsr/hna">HNA</a></li>
           <li><a href="/cgi-bin/luci/freifunk/olsr/mid">MID</a></li>
-          <li><a href="/cgi-bin/luci/freifunk/olsr/interfaces">Interfaces</a></li>
+          <li><a href="/cgi-bin/luci/freifunk/olsr/interfaces">Schnittstellen</a></li>
         </ul>
-      </li>
-
-      <li>
-        <a href="/cgi-bin/luci/freifunk/map">Map</a>
-      </li>
-
-      <li>
-        <a href="/cgi-bin/luci/freifunk/services">Services</a>
-      </li>
-
-    </ul>
-  </div>
-  
-</header>
+        </li>
 
 
-<DIV class="container">
-<div class="row">                                                                                                                                             
-<div class="span8">                                                                                                                                           
+         <li>
+                <a href="/cgi-bin/luci/freifunk/map">Karte</a>
+        </li>
+
+
+
+
+         <li>
+                <a href="/cgi-bin/luci/freifunk/services">Dienste</a>
+        </li>
+
+
+
+
+        </ul>
+
+
+
+    </div>
+   </div>
+  </header><div id="maincontent" class="container">
+
+
+
+<div class="container">
+<div class="row">
+
+
+<div class="span8">
+
+
 <h1>Dein Internetzugang via Weimarnetz</h1>
+<!--<a href='/cgi-bin/luci/freifunk/captive/?REDIRECTED=1&amp;FORM_LANG=de' title='diese Seite in deutsch anzeigen'><img src='/luci-static/images/flag_de.gif' border='0' alt='de' title='diese Seite in deutsch anzeigen'>&nbsp;deutsch</a>&nbsp;&nbsp;
 
-<A TABINDEX='6' HREF='http://10.63.178.1/cgi-bin-welcome.sh?REDIRECTED=1&amp;FORM_LANG=de' HREFLANG='de' CHARSET='ISO-8859-15' TITLE='diese Seite in deutsch anzeigen'><IMG SRC='http://10.63.178.1/images/flag_de.gif' BORDER='0' ALT='de' TITLE='diese Seite in deutsch anzeigen'>&nbsp;deutsch</A>&nbsp;&nbsp;<A TABINDEX='7' HREF='http://10.63.178.1/cgi-bin-welcome.sh?REDIRECTED=1&amp;FORM_LANG=en' HREFLANG='en' CHARSET='ISO-8859-15' TITLE='show this page in english'><IMG SRC='http://10.63.178.1/images/flag_en.gif' BORDER='0' ALT='en' TITLE='show this page in english'>&nbsp;english</A>&nbsp;&nbsp;<A TABINDEX='8' HREF='http://10.63.178.1/cgi-bin-welcome.sh?REDIRECTED=1&amp;FORM_LANG=fr' HREFLANG='fr' CHARSET='ISO-8859-15' TITLE='afficher cette page en anglais'><IMG SRC='http://10.63.178.1/images/flag_fr.gif' BORDER='0' ALT='fr' TITLE='afficher cette page en anglais'>&nbsp;fran&ccedil;ais</A>&nbsp;&nbsp;
-<br>Um den Internetzugang nutzen zu koennen musst Du unten auf den Knopf druecken.<br/> Dann hast Du auch Zugriff auf die Meldungen und Diskussionen.
+<a href='/cgi-bin/luci/freifunk/captive/?REDIRECTED=1&amp;FORM_LANG=en' title='show this page in english'><img src='/luci-static/images/flag_en.gif' border='0' alt='en' title='show this page in english'>&nbsp;english</a>&nbsp;&nbsp;
+
+<a href='/cgi-bin/luci/freifunk/captive/?REDIRECTED=1&amp;FORM_LANG=fr' title='afficher cette page en anglais'><img src='/luci-static/images/flag_fr.gif' border='0' alt='fr' title='afficher cette page en anglais'>&nbsp;fran&ccedil;ais</a>&nbsp;&nbsp;-->
+<br/>Um den Internetzugang nutzen zu können musst Du unten auf den Knopf drücken.<br/>
+ Dann hast Du auch Zugriff auf die Meldungen und Diskussionen.
+
 </div>
 <div class="span4">
-<IMG SRC="http://10.63.178.1/images/logo.gif" TITLE="Firmenzeichen ('Internet')" ALT="Firmenzeichen ('Internet')"><FORM METHOD="post" ACTION="http://10.63.178.1/cgi-bin-welcome.sh?REDIRECTED=1&amp;FORM_LANG">
+<img id="logo" src="/images/logo.gif" title="Weimarnetz" alt="Weimarnetz"></img>
 </div>
 </div>
+
+<form method="post" action="/cgi-bin/luci/freifunk/captive/?REDIRECTED=1&amp;FORM_LANG">
 <h2>Aktuelle Meldungen</h2>
-<div class="row">                                                                                                                 
-<div class="span6">
-<ul><li> 14. Mai 13 - Mindfactory AG unterstützt Weimarnetz und hilft bei der Beschaffung von Routern
-</li><li> 12. Mai 13 - Weimarnetz nimmt am Wireless Community Weekend 2013 teil
-</li><li>  8. Mai 13 - Vertragliche Vereinbarung mit der Stadt Weimar zur Routeraufstellung abgeschlossen
+<div class="row">
+
+
+<div class="span6" id="news">
+<ul><li>
+Meldungen werden geladen. Falls nicht, hast Du entweder Javascript im Browser deaktiviert oder Dir steht kein Internet zur Verfuegung.
+
 </li></ul>
 </div>
 </div>
-	<h2>Aktuelle Diskussionen </h2>
-	<div class="row">
-	<div class="span6">
+        <h2>Aktuelle Diskussionen </h2>
+        <div class="row">
+        <div class="span6" id="discussions">
 
-
-
-	   <!--openmodus: n-->
 <ul>
-<li><nobr><span class="np_thread_line_text"><font color="red">17.06.</font>: Naechstes Treffen am: Dienstag, 18. Juno 2013, Ort <i>von Weimarnetz Wiki</i></span></nobr></li><li><nobr><span class="np_thread_line_text"><font color="#999900">15.06.</font>: kein Empfang <i>von sven</i></span></nobr></li><li><nobr><span class="np_thread_line_text"><font color="#999900">15.06.</font>: ebertstr-kreuzung <i>von ebertstr-kreuzung</i></span></nobr></li><li><nobr><span class="np_thread_line_text"><font color="#00bb00">12.06.</font>: Hotspot 2.0 <i>von Max Albrecht</i></span></nobr></li><li><nobr><span class="np_thread_line_text">10.06.: Naechstes Treffen am: Dienstag, 11. Juno 2013, Ort <i>von Weimarnetz Wiki</i></span></nobr></li></ul>
- 
+<li>
+Diskussionen werden geladen. Falls nicht, hast Du entweder Javascript deaktiviert oder Dir steht kein Internet zur Verfuegung.
 
-	</div>
-	</div>
+</li></ul>
+
+
+
+        </div>
+        </div>
+
 <h2>Spendenaufruf</h2>
-<div class="row">                                                                                                                 
-<div class="span6">
-<ul><li> Das Weimarnetz ist auf Deine Spende angwiesen.
-</li><li> Als Spendenbetrag hat sich 5 Euro pro Person und Monat eingebürgert.
-</li><li> <b>Weimarnetz e.V. | KN: 365004871 | BLZ: 82051000 (Sparkasse Weimar)</b>
+<div class="row">
+
+
+<div class="span6" id="funds">
+<ul><li>
+Informationen zu Spenden werden geladen. Falls nicht, hast Du entweder Javascript deaktiviert oder Dir steht kein Internet zur Verfuegung.
+
 </li></ul>
 </div>
 </div>
-<INPUT TYPE="checkbox" ID="accept_terms" TABINDEX="4" NAME="FORM_RULES"><label for='accept_terms'>&nbsp;Ich akzeptiere die <A TABINDEX="5" HREF="http://10.63.178.1/cgi-bin-welcome.sh?REDIRECTED=1&amp;FORM_LANG=de&amp;FORM_SHOW_RULES=true" TITLE="ausf&uuml;hrliche Informationen zu den Vertragsbedingungen">Nutzungsbedingungen</A><a hreflang='en' href='http://bittorf-wireless.de/en/node/66' title='comprehensive wireless internet access throughout the entire hotel complex using mesh technology'>.</a></label><br/>
+
+<div class="row">
+<div class="span6">
+<input type="checkbox" id="accept_terms" tabindex="4" name="FORM_RULES"/><label for='accept_terms'>&nbsp;Ich akzeptiere die <a tabindex="5" href="/cgi-bin/luci/freifunk/captive?REDIRECTED=1&amp;FORM_SHOW_RULES=true" title="ausf&#38;uuml;hrliche Informationen zu den Vertragsbedingungen">Nutzungsbedingungen</a>.</label><br/>
 <button type="submit" class="btn info">Internet starten</button>
-</FORM>
-</div> <!-- /container -->
-</BODY></HTML>
+<div id="enabled">
+</div>
+</div>
+</div>
+</form>
+</div>
+
+<script type="text/javascript">//<!
+[CDATA[
+
+function removeLinks(text)
+
+{
+
+        text = text.replace(/(<a
+([^>]+)>)/gi, "");
+
+        return text.replace(/<\
+/a>/gi, "");
+
+}
+
+
+function removeSpan(text)
+
+{
+
+        text = text.replace(/(<s
+pan.*\/span>)/gi, "");
+
+        return text.replace(/<\
+/h.>/gi, "");
+
+}
+
+
+function removeHeadlines(text)
+
+{
+
+        text = text.replace(/(<h
+([^>]+)>)/gi, "");
+
+        return text.replace(/<\
+/h.>/gi, "");
+
+}
+
+function removeComments(text)
+
+{
+
+        return text.replace(/(<\
+!--([^>]+)-->)/gi, "");
+
+}
+
+function loadDiscussions()
+
+{
+
+        var xmlhttp;
+
+        var discussions;
+
+        if (window.XMLHttpRequest)
+
+        {// code for IE7+, Firefox, Chrome, Opera, Safari
+
+                xmlhttp=new XMLHttpRequest();
+
+        }
+
+        else
+
+        {// code for IE6, IE5
+
+                xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+
+        }
+
+        xmlhttp.open("GET","http://www.weimarnetz.de/latestnews.html",false);
+
+        xmlhttp.send();
+
+        discussions = removeLinks(xmlhttp.responseText);
+
+        document.getElementById("discussions").innerHTML=discussions;
+
+}
+
+
+function loadNews(data)
+
+{
+
+        var news = data.parse.text['*'];
+
+        news = removeHeadlines(news);
+
+        news = removeSpan(news);
+
+        news = removeLinks(news);
+
+        news = removeComments(news);
+
+        //remove page specific part: aeltere Ankuendigungen
+
+        news = news.replace(/<ul.+<\/small>\n<\/li><\
+/ul>/gi, "");
+
+        document.getElementById("news").innerHTML=news;
+
+        console.log(news);
+
+}
+
+function loadFunds(data)
+
+{
+
+        var funds = data.parse.text['*'];
+
+        funds = removeHeadlines(funds);
+
+        funds = removeSpan(funds);
+
+        funds = removeLinks(funds);
+
+        funds = removeComments(funds);
+
+        document.getElementById("funds").innerHTML=funds;
+
+        console.log(funds);
+
+}
+
+function loadLogo(data)
+
+{
+
+        var logo = data.query.pages;
+
+        var length = Object.keys(logo).length;
+
+        if (length = 1)
+
+        {
+
+                for(id in logo)
+
+                {
+
+                        myLogo = logo[id]['imageinfo'][0]['url'];
+
+                        console.log(myLogo);
+
+                        document.getElementById("logo").src=myLogo;
+
+                }
+
+        }
+
+}
+
+console.log(document.URL);
+
+document.getElementById("enabled").innerHTML="<br/><br/>Schon freigeschaltet? Hier gehts zur Ursprungsseite: <a href=\"" + document.URL + "\">" + document.URL + "</a
+>";
+
+loadDiscussions();
+
+//]]></script>
+<script type="application/javascript" src="http://wireless.subsignal.org/api.php?format=json&amp;action=parse&amp;page=Vorlage:Startseite.Aktuelles&amp;prop=text&amp;callback=loadNews"></script>
+<script type="application/javascript" src="http://wireless.subsignal.org/api.php?format=json&amp;action=parse&amp;page=Vorlage:Spendenaufruf&amp;prop=text&amp;callback=loadFunds"></script>
+<script type="application/javascript" src="http://wireless.subsignal.org/api.php?format=json&amp;action=query&amp;titles=Datei:Node107.jpg&amp;prop=imageinfo&amp;iiprop=url&amp;disablepp&amp;redirects&amp;callback=loadLogo"></script>
+
+   <footer><a href="http://luci.subsignal.org/">Powered by LuCI Trunk (svn-r9875)</a>
+
+    OpenWrt Barrier Breaker r37711
+
+
+
+
+     <ul class="breadcrumb pull-right" id="modemenu">
+
+
+                    <li class="active"><a href="/cgi-bin/luci/freifunk/">Freifunk</a> <span class="divider">|</span></li>
+
+
+                    <li><a href="/cgi-bin/luci/admin/">Administration</a> <span class="divider">|</span></li>
+
+
+     </ul>
+
+
+   </footer>
+   </div>
+  </div>
+ </body>
+</html>
