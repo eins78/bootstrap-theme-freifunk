@@ -159,10 +159,10 @@
 // Dropdowns
 // -------------------------
 
-@dropdown-bg:                    #fff;
-@dropdown-border:                rgba(0,0,0,.15);
-@dropdown-fallback-border:       #ccc;
-@dropdown-divider-bg:            #e5e5e5;
+@dropdown-bg:                    @ff-Y;
+@dropdown-border:                fadeout(@ff-Md, 50%);
+@dropdown-fallback-border:       @ff-Md;
+@dropdown-divider-bg:            @ff-Md;
 
 @dropdown-link-active-color:     #fff;
 @dropdown-link-active-bg:        @component-active-bg;
@@ -171,11 +171,11 @@
 @dropdown-link-hover-color:      #fff;
 @dropdown-link-hover-bg:         @dropdown-link-active-bg;
 
-@dropdown-link-disabled-color:   @gray-light;
+@dropdown-link-disabled-color:   @text-muted;
 
-@dropdown-header-color:          @gray-light;
+@dropdown-header-color:          @text-muted;
 
-@dropdown-caret-color:           #000;
+@dropdown-caret-color:           @ff-K;
 
 
 // COMPONENT VARIABLES
@@ -246,9 +246,9 @@
 
 // Navbar links
 @navbar-default-link-color:                @ff-M;
-@navbar-default-link-hover-color:          @ff-Mdd;
-@navbar-default-link-hover-bg:             @ff-Yll;
-@navbar-default-link-active-color:         @ff-Mdd;
+@navbar-default-link-hover-color:          @ff-Ylll;
+@navbar-default-link-hover-bg:             @ff-Md;
+@navbar-default-link-active-color:         @ff-Y;
 @navbar-default-link-active-bg: lighten(@navbar-default-bg, 25%);
 @navbar-default-link-disabled-color:       #ccc;
 @navbar-default-link-disabled-bg:          transparent;
@@ -488,17 +488,17 @@
 // Panels
 // -------------------------
 @panel-bg:                    @body-bg;
-@panel-inner-border:          @ff-M;
+@panel-inner-border:          @ff-Md;
 @panel-border-radius:         @border-radius-base;
-@panel-footer-bg:             @ff-Y;
+@panel-footer-bg:             @ff-Yl;
 
-@panel-default-text:          @gray-dark;
-@panel-default-border:        @ff-M;
-@panel-default-heading-bg:    @ff-Y;
+@panel-default-text:          @ff-K;
+@panel-default-border:        @ff-Md;
+@panel-default-heading-bg:    @ff-Yl;
 
-@panel-primary-text:          #fff;
+@panel-primary-text:          @ff-Ylll;
 @panel-primary-border:        @panel-default-border;
-@panel-primary-heading-bg:    @brand-primary;
+@panel-primary-heading-bg:    @ff-Md;
 
 @panel-success-text:          @state-success-text;
 @panel-success-border:        @panel-default-border;
@@ -530,12 +530,12 @@
 
 // Wells
 // -------------------------
-@well-bg:                     #f5f5f5;
+@well-bg:                     @ff-Y;
 
 
 // Badges
 // -------------------------
-@badge-color:                 #fff;
+@badge-color:                 @ff-Md;
 @badge-link-hover-color:      #fff;
 @badge-bg:                    @gray-light;
 
@@ -579,12 +579,12 @@
 
 // Code
 // ------------------------
-@code-color:                  #c7254e;
-@code-bg:                     #f9f2f4;
+@code-color:                  @ff-Md;
+@code-bg:                     @ff-Y;
 
-@pre-bg:                      #f5f5f5;
-@pre-color:                   @gray-dark;
-@pre-border-color:            #ccc;
+@pre-bg:                      @ff-Y;
+@pre-color:                   @ff-Mdd;
+@pre-border-color:            @ff-Md;
 @pre-scrollable-max-height:   340px;
 
 // Type
