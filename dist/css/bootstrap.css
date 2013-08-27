@@ -6463,7 +6463,7 @@ body.fixed-nav {
 .cloudy,
 .alert-top,
 .jumbotron {
-  background-image: url(../../images/wolke2.min.png);
+  background-image: url(../../images/wolke.min.png);
   background-size: 300% auto;
   background-position: 50% 50%;
   background-attachment: fixed;
@@ -6484,7 +6484,7 @@ body.fixed-nav {
   line-height: 2.1428571435;
   color: inherit;
   background-color: #80d9ff;
-  background-image: url(../../images/wolke2.min.png);
+  background-image: url(../../images/wolke.min.png);
   background-size: 300% auto;
   background-position: 50% 50%;
   background-attachment: fixed;
@@ -6535,7 +6535,7 @@ body.fixed-nav {
   line-height: 2.1428571435;
   color: inherit;
   background-color: #80d9ff;
-  background-image: url(../../images/wolke2.min.png);
+  background-image: url(../../images/wolke.min.png);
   background-size: 300% auto;
   background-position: 50% 50%;
   background-attachment: fixed;
