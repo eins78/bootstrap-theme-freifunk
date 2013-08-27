@@ -36,6 +36,13 @@ module.exports = (grunt) ->
           { expand: true, cwd: '<%= bowerDirectory %>/bootstrap/fonts', src: ['*'], dest: 'dist/fonts' }
         ]
     clean: ['tmp']
+    inlinecss:
+            main:
+                options: {
+                },
+                files: {
+                    './examples/weimarnetz-captive-inline.html': './examples/weimarnetz-captive.html',
+                }
 
   grunt.loadNpmTasks('grunt-contrib-less')
   grunt.loadNpmTasks('grunt-contrib-watch')
@@ -44,6 +51,9 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks('grunt-text-replace')
   grunt.loadNpmTasks('grunt-contrib-clean')
   grunt.loadNpmTasks('grunt-contrib-connect')
+  
+  # fork
+  grunt.loadNpmTasks('grunt-inline-content');
 
-  grunt.registerTask('default', ['copy', 'less', 'cssmin', 'clean'])
+  grunt.registerTask('default', ['copy', 'less', 'cssmin', 'inlinecss', 'clean'])
   grunt.registerTask('serve', ['connect', 'watch'])
