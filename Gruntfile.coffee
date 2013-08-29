@@ -8,6 +8,12 @@ module.exports = (grunt) ->
           paths: ['less', 'tmp', '<%= bowerDirectory %>/bootstrap/less']
         files:
           'dist/css/bootstrap.css': ['less/theme.less']
+    recess:
+      dist:
+        options:
+          compile: true
+        files:
+          'dist/css/bootstrap.css': ['dist/css/bootstrap.css']
     watch:
       less:
         files: ['less/*.less']
@@ -29,6 +35,15 @@ module.exports = (grunt) ->
         options:
           port: grunt.option('port') || '8000'
           hostname: grunt.option('host') || 'localhost'
+    assemble:
+      pages:
+        options:
+          data: './bower.json',
+          flatten: true,
+          assets: 'dist'
+        files:
+          'index.html': ['pages/index.html'],
+          'examples/': ['pages/examples/*.html']
     copy:
       bootstrap:
         files: [
@@ -45,15 +60,15 @@ module.exports = (grunt) ->
                 }
 
   grunt.loadNpmTasks('grunt-contrib-less')
+  grunt.loadNpmTasks('grunt-recess')
   grunt.loadNpmTasks('grunt-contrib-watch')
   grunt.loadNpmTasks('grunt-contrib-cssmin')
   grunt.loadNpmTasks('grunt-contrib-copy')
   grunt.loadNpmTasks('grunt-text-replace')
   grunt.loadNpmTasks('grunt-contrib-clean')
   grunt.loadNpmTasks('grunt-contrib-connect')
-  
-  # fork
   grunt.loadNpmTasks('grunt-inline-content');
+  grunt.loadNpmTasks('assemble')
 
-  grunt.registerTask('default', ['copy', 'less', 'cssmin', 'inlinecss', 'clean'])
+  grunt.registerTask('default', ['copy', 'less', 'recess', 'cssmin', 'inlinecss', 'assemble', 'clean'])
   grunt.registerTask('serve', ['connect', 'watch'])
