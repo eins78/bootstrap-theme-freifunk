@@ -40,6 +40,8 @@
 @ff-M: #dc0067;    // "official"
 @ff-C: #009ee0;    // "official"
 @ff-K: @gray-dark; // #333
+@ff-R: mix(@ff-M, @ff-Y, 66.7%);
+@ff-O: mix(@ff-M, @ff-Y, 33.3%);
 
 /* make lighter and darker tones */
 @ff-Yl: lighten(@ff-Y, 10%);
@@ -69,10 +71,19 @@
 
 
 /* TYPO */
+
+p.lead {
+  font-size: inherit;
+}
+
 .jumbotron {
   h1, .h1 {
     color: @ff-Md;
   }
+}
+
+.well, .jumbotron {
+  text-shadow: 0 -1px 0px hsla(0,0%,100%,.3);
 }
 
 a[class$="-brand"] {
@@ -204,12 +215,6 @@ footer {
       }
     }
   }
-}
-
-/*  WELLS */
-
-.well {
-  text-shadow: 0 -1px 0 hsla(0,0%,100%,.2);
 }
 
 /* --- THEME SPECIALS --- */
