@@ -5,7 +5,7 @@
   "private": true,
   "themestrap": {
     "name": "Freifunk",
-    "repo": "https://github.com/eins78/freifunk"
+    "repo": "git://github.com/eins78/freifunk"
   },
   "main": [
     "dist/bootstrap.min.css",
