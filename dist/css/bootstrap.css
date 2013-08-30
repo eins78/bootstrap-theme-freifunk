@@ -7286,7 +7286,7 @@ body.fixed-nav {
 }
 /* set a ff logo bg*/
 .ff-logo-bg {
-  background-image: url(../../_media/Freifunk-logo.svg);
+  background-image: url(../../images/freifunk-logo.svg);
   background-size: auto 25% auto;
   background-position: 94% 17%;
   background-attachment: scroll;
