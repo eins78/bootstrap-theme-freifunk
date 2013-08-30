@@ -219,45 +219,44 @@ footer {
 
 /* --- THEME SPECIALS --- */
 
+body {
+  padding-bottom: 50px;  
+}
+
 /* set class 'fixed-nav' on body to adjust for fixed navbar */
 body.fixed-nav {
   padding-top: 50px;
-  padding-bottom: 20px;
 }
 
-/*.jumbotron.jumbotron-special {
-  .btn {
-    .ff-script;
+
+/* TOP alerts, for use on top of main page */
+.alert-top {
+  border-width: 0 0 3px 0;
+  border-radius: 0;
+  margin-bottom: 0;
+  
+  &.alert-success {
+    color: @alert-success-text;
+    background-color: @alert-success-bg;
+    border-color: @alert-success-text;
   }
 }
-*/
 
-/* CLOUDS!
-   - JUMBOTRONs
-   - TOP ALERTS           */
 
-/* set a cloud bg */
-.cloudy,
-.alert-top, 
-.jumbotron {
-  background-image: url(../../images/wolke.min.png);
-  background-size: 300% auto;
-  background-position: 50% 50%;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-}
+/*Freifunk Logo (background)*/
 
-/* set a ff logo bg*/
+@ff-logo-bg-image: url(../../images/freifunk-logo.svg);
 @ff-logo-bg-size: 25% auto;
 @ff-logo-bg-size-lg: auto 75%;
 @ff-logo-bg-position: 94% 17%;
 @ff-logo-bg-position-lg: 96% 63.5%;
+@ff-logo-bg-attachment: scroll;
 
 .ff-logo-bg {
-  background-image: url(../../images/freifunk-logo.svg);
+  background-image: @ff-logo-bg-image;
   background-size: auto @ff-logo-bg-size;
   background-position: @ff-logo-bg-position;
-  background-attachment: scroll;
+  background-attachment: @ff-logo-bg-attachment;
   background-repeat: no-repeat;
 
   /* cut container on right side for less type on logo */
@@ -266,14 +265,34 @@ body.fixed-nav {
   }
 }
 
+
+/* CLOUDS!
+   - JUMBOTRONs
+   - TOP ALERTS           */
+
+@cloud-bg-image: url(../../images/wolke.min.png);
+@cloud-bg-size: 300% auto;
+@cloud-bg-position: 50% 50%;
+@cloud-bg-attachment: fixed;
+
+.cloudy,
+.alert-top, 
+.jumbotron {
+  background-image: @cloud-bg-image;
+  background-size: @cloud-bg-size;
+  background-position: @cloud-bg-position;
+  background-attachment: @cloud-bg-attachment;
+  background-repeat: no-repeat;
+}
+
 /* take care of elements that have cloud+logo */
 .cloudy.ff-logo-bg,
 .alert-top.ff-logo-bg, 
 .jumbotron.ff-logo-bg {
-  background-image: url(../../images/wolke.min.png), url(../../_media/Freifunk-logo.svg);
-  background-size: 300% auto, @ff-logo-bg-size;
-  background-position: 50% 50%, @ff-logo-bg-position;
-  background-attachment: fixed, scroll;
+  background-image: @cloud-bg-image, @ff-logo-bg-image;
+  background-size: @cloud-bg-size, @ff-logo-bg-size;
+  background-position: @cloud-bg-position, @ff-logo-bg-position;
+  background-attachment: @cloud-bg-attachment, @ff-logo-bg-attachment;
 }
 
 /* larger-than-mobile overides for cloud and cloud+logo bg*/
@@ -297,22 +316,5 @@ body.fixed-nav {
   
 }
 
-/* TOP alerts, directly after navbar */
-.alert-top {
-  .jumbotron;
-  border-width: 0 0 3px 0;
-  border-radius: 0;
-  margin-bottom: 0;
-  
-  &.alert-success {
-    color: @alert-success-text;
-    background-color: @alert-success-bg;
-    border-color: @alert-success-text;
-  }
-}
-
-.navbar + .alert {
-  .alert-top;
-}
 
 /* ------- */

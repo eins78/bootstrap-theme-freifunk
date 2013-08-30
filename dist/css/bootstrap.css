@@ -7260,31 +7260,25 @@ footer {
   border-bottom-width: 3px;
 }
 /* --- THEME SPECIALS --- */
+body {
+  padding-bottom: 50px;
+}
 /* set class 'fixed-nav' on body to adjust for fixed navbar */
 body.fixed-nav {
   padding-top: 50px;
-  padding-bottom: 20px;
 }
-/*.jumbotron.jumbotron-special {
-  .btn {
-    .ff-script;
-  }
+/* TOP alerts, for use on top of main page */
+.alert-top {
+  border-width: 0 0 3px 0;
+  border-radius: 0;
+  margin-bottom: 0;
 }
-*/
-/* CLOUDS!
-   - JUMBOTRONs
-   - TOP ALERTS           */
-/* set a cloud bg */
-.cloudy,
-.alert-top,
-.jumbotron {
-  background-image: url(../../images/wolke.min.png);
-  background-size: 300% auto;
-  background-position: 50% 50%;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
+.alert-top.alert-success {
+  color: #468847;
+  background-color: #dff0d8;
+  border-color: #468847;
 }
-/* set a ff logo bg*/
+/*Freifunk Logo (background)*/
 .ff-logo-bg {
   background-image: url(../../images/freifunk-logo.svg);
   background-size: auto 25% auto;
@@ -7297,11 +7291,23 @@ body.fixed-nav {
 .ff-logo-bg .container {
   padding-right: 6em;
 }
+/* CLOUDS!
+   - JUMBOTRONs
+   - TOP ALERTS           */
+.cloudy,
+.alert-top,
+.jumbotron {
+  background-image: url(../../images/wolke.min.png);
+  background-size: 300% auto;
+  background-position: 50% 50%;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
 /* take care of elements that have cloud+logo */
 .cloudy.ff-logo-bg,
 .alert-top.ff-logo-bg,
 .jumbotron.ff-logo-bg {
-  background-image: url(../../images/wolke.min.png), url(../../_media/Freifunk-logo.svg);
+  background-image: url(../../images/wolke.min.png), url(../../images/freifunk-logo.svg);
   background-size: 300% auto, 25% auto;
   background-position: 50% 50%, 94% 17%;
   background-attachment: fixed, scroll;
@@ -7323,112 +7329,5 @@ body.fixed-nav {
   .ff-logo-bg .container {
     padding-right: 6em;
   }
-}
-/* TOP alerts, directly after navbar */
-.alert-top {
-  padding: 30px;
-  margin-bottom: 30px;
-  font-size: 24px;
-  font-weight: 200;
-  line-height: 2.1428571435;
-  color: inherit;
-  background-color: #80d9ff;
-  text-shadow: -1px -1px 0px rgba(255, 255, 255, 0.3);
-  background-image: url(../../images/wolke.min.png);
-  background-size: 300% auto;
-  background-position: 50% 50%;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  border-width: 0 0 3px 0;
-  border-radius: 0;
-  margin-bottom: 0;
-}
-.alert-top h1 {
-  line-height: 1;
-  color: inherit;
-}
-.alert-top p {
-  line-height: 1.4;
-}
-.container .alert-top {
-  border-radius: 8px;
-}
-@media screen and (min-width: 768px) {
-  .alert-top {
-    padding-top: 48px;
-    padding-bottom: 48px;
-  }
-  .container .alert-top {
-    padding-left: 60px;
-    padding-right: 60px;
-  }
-  .alert-top h1 {
-    font-size: 72px;
-  }
-}
-.alert-top h1,
-.alert-top .h1 {
-  color: #a9004f;
-}
-.alert-top .btn {
-  margin: 0.5em 0.5em 0 0;
-}
-.alert-top.alert-success {
-  color: #468847;
-  background-color: #dff0d8;
-  border-color: #468847;
-}
-.navbar + .alert {
-  padding: 30px;
-  margin-bottom: 30px;
-  font-size: 24px;
-  font-weight: 200;
-  line-height: 2.1428571435;
-  color: inherit;
-  background-color: #80d9ff;
-  text-shadow: -1px -1px 0px rgba(255, 255, 255, 0.3);
-  background-image: url(../../images/wolke.min.png);
-  background-size: 300% auto;
-  background-position: 50% 50%;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  border-width: 0 0 3px 0;
-  border-radius: 0;
-  margin-bottom: 0;
-}
-.navbar + .alert h1 {
-  line-height: 1;
-  color: inherit;
-}
-.navbar + .alert p {
-  line-height: 1.4;
-}
-.container .navbar + .alert {
-  border-radius: 8px;
-}
-@media screen and (min-width: 768px) {
-  .navbar + .alert {
-    padding-top: 48px;
-    padding-bottom: 48px;
-  }
-  .container .navbar + .alert {
-    padding-left: 60px;
-    padding-right: 60px;
-  }
-  .navbar + .alert h1 {
-    font-size: 72px;
-  }
-}
-.navbar + .alert h1,
-.navbar + .alert .h1 {
-  color: #a9004f;
-}
-.navbar + .alert .btn {
-  margin: 0.5em 0.5em 0 0;
-}
-.navbar + .alert.alert-success {
-  color: #468847;
-  background-color: #dff0d8;
-  border-color: #468847;
 }
 /* ------- */
