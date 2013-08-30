@@ -235,6 +235,8 @@ body.fixed-nav {
 /* CLOUDS!
    - JUMBOTRONs
    - TOP ALERTS           */
+
+/* set a cloud bg */
 .cloudy,
 .alert-top, 
 .jumbotron {
@@ -242,14 +244,51 @@ body.fixed-nav {
   background-size: 300% auto;
   background-position: 50% 50%;
   background-attachment: fixed;
+  background-repeat: no-repeat;
 }
 
+/* set a ff logo bg*/
+@ff-logo-bg-size: auto 50%;
+@ff-logo-bg-size-lg: auto 75%;
+@ff-logo-bg-position: right center;
+
+.ff-logo-bg {
+  background-image: url(../../_media/Freifunk-logo.svg);
+  background-size: auto @ff-logo-bg-size;
+  background-position: @ff-logo-bg-position;
+  background-attachment: scroll;
+  background-repeat: no-repeat;
+}
+
+/* take care of elements that have cloud+logo */
+.cloudy.ff-logo-bg,
+.alert-top.ff-logo-bg, 
+.jumbotron.ff-logo-bg {
+  background-image: url(../../images/wolke.min.png), url(../../_media/Freifunk-logo.svg);
+  background-size: 300% auto, @ff-logo-bg-size;
+  background-position: 50% 50%, @ff-logo-bg-position;
+  background-attachment: fixed, scroll;
+}
+
+/* >=mobile overides for cloud and cloud+logo bg*/
 @media (min-width: 768px) {
   .cloudy, 
   .alert-top, 
   .jumbotron {
     background-size: 125% auto;
+
+    &.ff-logo-bg  {
+      background-size: 125% auto, @ff-logo-bg-size;
+      
+      /* cut container on right side for less type on logo */
+      .container {
+        padding-right: 6em;
+      }
+      
+    }
+  
   }
+  
 }
 
 /* TOP alerts, directly after navbar */
