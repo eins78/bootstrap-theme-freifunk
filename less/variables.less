@@ -17,6 +17,7 @@
 // Brand colors
 // -------------------------
 
+/*@brand-primary:              #428bca;*/
 @brand-primary-twbs:         @ff-M;
 @brand-success-twbs:         #5cb85c;
 @brand-warning-twbs:         #f0ad4e;
@@ -52,9 +53,9 @@
 // Typography
 // -------------------------
 
-@font-family-sans-serif:  @ff-mainfont, "Helvetica Neue", Helvetica, Arial, sans-serif;
+@font-family-sans-serif:  @ff-mainfont, "Trebuchet MS", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
 @font-family-serif:       Georgia, "Times New Roman", Times, serif;
-@font-family-monospace:   @ff-monofont, Monaco, Menlo, Consolas, "Courier New", monospace;
+@font-family-monospace:   @ff-monofont, "Source Code Pro", Inconsolata, Monaco, Menlo, Consolas, "Courier New", monospace;
 @font-family-base:        @font-family-sans-serif;
 
 @font-size-base:          16px;
@@ -474,8 +475,8 @@
 
 // Progress bars
 // -------------------------
-@progress-bg:                 #f5f5f5;
-@progress-bar-color:          #fff;
+@progress-bg:                 hsl(hue(@body-bg), saturation(@body-bg), (lightness(@body-bg)-(lightness(#fff)-(lightness(#f5f5f5)))));
+@progress-bar-color:          @body-bg;
 
 @progress-bar-bg:             @brand-primary;
 @progress-bar-success-bg:     @brand-success;
