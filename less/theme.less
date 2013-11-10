@@ -271,8 +271,9 @@ body.fixed-nav {
    - TOP ALERTS           */
 
 @cloud-bg-image: url(../../images/wolke.min.png);
-@cloud-bg-size: 300% auto;
-@cloud-bg-position: 50% 50%;
+@cloud-bg-size: 200% auto;
+@cloud-bg-position: 50% 5%;
+@cloud-bg-position-lg: 50% 50%;
 @cloud-bg-attachment: fixed;
 
 .cloudy,
@@ -300,21 +301,32 @@ body.fixed-nav {
   .cloudy, 
   .alert-top, 
   .jumbotron {
+    background-position: @cloud-bg-position;
     background-size: 125% auto;
 
     &.ff-logo-bg  {
+      background-position: @cloud-bg-position-lg, @ff-logo-bg-position-lg;
       background-size: 125% auto, @ff-logo-bg-size;
-      background-position: 50% 50%, @ff-logo-bg-position-lg;
     }
-  
   }
   
   /* cut container on right side for less type on logo */
   .ff-logo-bg .container {
     padding-right: 6em;
   }
-  
 }
 
+/* the medium size makes the cloud look good on tablets… */
+@media (min-width: 768px) and (max-width: 1200px) {
+  .cloudy, 
+  .alert-top, 
+  .jumbotron {
+    background-position: @cloud-bg-position;
+
+    &.ff-logo-bg  {
+      background-position: @cloud-bg-position, @ff-logo-bg-position-lg;
+    }
+  }
+}
 
 /* ------- */
