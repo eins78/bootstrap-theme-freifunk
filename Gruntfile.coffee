@@ -73,5 +73,5 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks('grunt-inline-content');
   grunt.loadNpmTasks('assemble')
 
-  grunt.registerTask('default', ['copy', 'less', 'recess', 'cssmin', 'inlinecss', 'assemble', 'clean'])
+  grunt.registerTask('default', ['copy', 'less', 'recess', 'cssmin', 'assemble', 'clean'])
   grunt.registerTask('serve', ['connect', 'watch'])
