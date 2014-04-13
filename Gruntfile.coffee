@@ -54,13 +54,6 @@ module.exports = (grunt) ->
           { expand: true, cwd: '<%= bowerDirectory %>/font-awesome/font', src: ['*'], dest: 'dist/fonts' }
         ]
     clean: ['tmp']
-    inlinecss:
-            main:
-                options: {
-                },
-                files: {
-                    './examples/weimarnetz-captive-inline.html': './examples/weimarnetz-captive.html',
-                }
 
   grunt.loadNpmTasks('grunt-contrib-less')
   grunt.loadNpmTasks('grunt-recess')
