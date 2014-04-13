@@ -7,7 +7,7 @@
 <meta name="description" content="Weimarnetz Freifunk Initiative">
 <meta name="author" content="Weimarnetz e.V." >
 
-  <link href="../dist/css/bootstrap.min.css" rel="stylesheet"> 
+  <link href="{{assets}}/css/bootstrap.css" rel="stylesheet"> 
 
 <!-- local fixes. TODO @theme -->
 <style type="text/css">
@@ -36,8 +36,15 @@
   
   </head>
 
-  <body id="home" class="fixed-nav cloudy">
+  <body id="home" class="fixed-nav">
 
+    
+    <noscript><div class="container">
+    <div class="alert alert-error">
+    <strong>Achtung!</strong> Bitte aktiviere Javascript in Deinem Browser, um diese Website vollständig nutzen zu können.
+    </div>
+    </div></noscript>
+    
     
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
   <!-- Brand and toggle get grouped for better mobile display -->
@@ -104,15 +111,8 @@
   </div><!-- /.navbar-collapse -->
 </nav>
 
-    
-    <noscript><div class="container">
-    <div class="alert alert-error">
-    <strong>Achtung!</strong> Bitte aktiviere Javascript in Deinem Browser, um diese Website vollständig nutzen zu können.
-    </div>
-    </div></noscript>
-    
     <!-- log-in-alert for testing-->
-    <div class="alert jumbotron alert-unlock alert-success alert-dismissable">
+    <div class="alert jumbotron alert-success alert-top alert-dismissable">
       <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
       <div class="container">
         <h2>Dein Internetzugang wurde erfolgreich freigeschaltet</h2>
@@ -123,10 +123,10 @@
      -->
 
     <!-- grosses startseitenbanner -->
-    <div id="banner" class="jumbotron jumbotron-special">
+    <div id="banner" class="jumbotron jumbotron-special ff-logo-bg">
       <div class="container">
         <h1>Willkommen im Weimarnetz</h1>
-        <p class="lead">Freifunk in Weimar &mdash; Das freie B&uuml;rger-WLAN!</p>
+        <p class="lead">Freifunk in Weimar &mdash; Das freie B&uuml;rger-Wlan!</p>
         <p>
           <a class="btn btn-primary btn-lg" href="http://wireless.subsignal.org/index.php?title=Schnelleinstieg">Jetzt Mitfunken &raquo;</a>
           <a class="btn btn-warning btn-lg" href="/contact.php">Hilfe bekommen &raquo;</a>
