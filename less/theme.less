@@ -317,9 +317,7 @@ body.fixed-nav {
 }
 
 
-/* CLOUDS!
-   - JUMBOTRONs
-   - TOP ALERTS           */
+/* CLOUDS and other fancy backgrounds! */
 
 @cloud-bg-image: url(../../images/wolke.min.png);
 @cloud-bg-size: 200% auto;
@@ -327,9 +325,7 @@ body.fixed-nav {
 @cloud-bg-position-lg: 50% 50%;
 @cloud-bg-attachment: fixed;
 
-.cloudy,
-.alert-top, 
-.jumbotron {
+.cloudy-bg {
   background-image: @cloud-bg-image;
   background-size: @cloud-bg-size;
   background-position: @cloud-bg-position;
@@ -338,9 +334,7 @@ body.fixed-nav {
 }
 
 /* take care of elements that have cloud+logo */
-.cloudy.ff-logo-bg,
-.alert-top.ff-logo-bg, 
-.jumbotron.ff-logo-bg {
+.cloudy-bg.ff-logo-bg {
   background-image: @cloud-bg-image, @ff-logo-bg-image;
   background-size: @cloud-bg-size, @ff-logo-bg-size;
   background-position: @cloud-bg-position, @ff-logo-bg-position;
@@ -349,9 +343,7 @@ body.fixed-nav {
 
 /* larger-than-mobile overides for cloud and cloud+logo bg*/
 @media (min-width: 768px) {
-  .cloudy, 
-  .alert-top, 
-  .jumbotron {
+  .cloudy-bg {
     background-position: @cloud-bg-position;
     background-size: 125% auto;
 
@@ -369,9 +361,7 @@ body.fixed-nav {
 
 /* the medium size makes the cloud look good on tablets… */
 @media (min-width: 768px) and (max-width: 1200px) {
-  .cloudy, 
-  .alert-top, 
-  .jumbotron {
+  .cloudy-bg {
     background-position: @cloud-bg-position;
 
     &.ff-logo-bg  {
