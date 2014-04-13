@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Weimarnetz - Rootserver</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Weimarnetz Freifunk Initiative">
+<meta name="author" content="Weimarnetz e.V." >
+
+  <link href="../dist/css/bootstrap.css" rel="stylesheet"> 
+
+<!-- local fixes. TODO @theme -->
+<style type="text/css">
+  [class^="col-"] > ul {
+    padding-left: 1em;
+  }
+  footer {
+    margin-top: 3em;
+  }
+  nobr {
+    white-space: normal;
+  }
+</style>
+
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+  <script src="bower_components/bootstrap/assets/js/html5shiv.js"></script>
+  <script src="bower_components/bootstrap/assets/js/respond.min.js"></script>
+<![endif]-->
+
+<!-- Le fav and touch icons -->
+<link rel="shortcut icon" href="img/favicon.ico">
+<link rel="apple-touch-icon" href="http://twitter.github.com/bootstrap/examples/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="http://twitter.github.com/bootstrap/examples/images/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="http://twitter.github.com/bootstrap/examples/images/apple-touch-icon-114x114.png">
+  
+  </head>
+
+  <body id="home" class="fixed-nav">
+
+    
+    <noscript><div class="container">
+    <div class="alert alert-error">
+    <strong>Achtung!</strong> Bitte aktiviere Javascript in Deinem Browser, um diese Website vollständig nutzen zu können.
+    </div>
+    </div></noscript>
+    
+    
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <!-- Brand and toggle get grouped for better mobile display -->
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand active" href="/"><strong>Weimarnetz</strong></a>
+  </div>
+
+  <!-- Collect the nav links, forms, and other content for toggling -->
+  <div class="collapse navbar-collapse navbar-ex1-collapse">
+    <ul class="nav navbar-nav">
+      <li class="divider-vertical"></li>
+      <li class="dropdown">
+        <a href="/wiki.php" class="dropdown-toggle" data-toggle="dropdown">Informationen <b class="caret"></b></a>
+        <ul class="dropdown-menu">
+          <li  ><a href="/about.php">Selbstdarstellung</a></li>
+          <li ><a href="/wiki.php">Wiki</a></li>
+          <li ><a href="/news.php" >Newsserver</a></li>
+          <li ><a href="/termsofuse.php" >Nutzungsbedingungen</a></li>
+          <li ><a href="/picopeering.php" >Picopeering Aggreement</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="/map.php" class="dropdown-toggle"  data-toggle="dropdown">Karten <b class="caret"></b></a>
+        <ul class="dropdown-menu">
+          <li  ><a href="/map2.php">Geographische Karte (aktiv + inaktiv)</a></li>
+          <li  ><a href="/map.php">Geographische Karte (Live!)</a></li>
+          <li  ><a href="/topology.php">Topologische Karte</a></li>
+        </ul>          
+      </li>
+      <li class="dropdown">
+        <a href="/status.php" class="dropdown-toggle"  data-toggle="dropdown">Status <b class="caret"></b></a>
+        <ul class="dropdown-menu">
+          <li  ><a href="/status.php" >OLSR Status</a></li>   
+          <li  ><a href="/monitoring.php" >Monitoring</a></li>
+         </ul>
+      </li>
+      <li class="dropdown">
+        <a href="/freifunk/firmware/ar71xx" class="dropdown-toggle"  data-toggle="dropdown">Firmware <b class="caret"></b></a>
+        <ul class="dropdown-menu">
+<li  ><a href="/freifunk/firmware/ar71xx" >Atheros (TP-Link, Ubiqity, usw)</a></li>   
+          <li  ><a href="/freifunk/firmware/brcm47xx" >Broadcom (Linksys, Buffalo, usw.)</a></li>
+          <li  ><a href="/freifunk/firmware/nightlies" >Nightly Builds</a></li>
+        </ul>
+      </li>
+      <li class="divider-vertical"></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li  ><a href="/partner.php">Partner</a></li>
+      <li class="dropdown">
+        <a href="/impressum.php" class="dropdown-toggle"  data-toggle="dropdown">Impressum <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+          <li  ><a href="/impressum.php">Impressum</a></li>
+          <li  ><a href="/contact.php">Kontakt</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div><!-- /.navbar-collapse -->
+</nav>
+
+    <!-- log-in-alert for testing-->
+    <div class="jumbotron alert alert-success alert-top alert-dismissable">
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+      <div class="container">
+        <h2>Dein Internetzugang wurde erfolgreich freigeschaltet</h2>
+        <p>Den Internetzugang stellt Dir <a href='http://example.com/cgi-bin/luci/freifunk/contact'>dieser freundliche Nachbar</a> bereit</p>
+      </div>
+    </div>
+    <!--
+     -->
+
+    <!-- grosses startseitenbanner -->
+    <div id="banner" class="jumbotron cloudy-bg ff-logo-bg">
+      <div class="container">
+        <h1>Willkommen im Weimarnetz</h1>
+        <p class="lead">Freifunk in Weimar &mdash; Das freie B&uuml;rger-Wlan!</p>
+        <p>
+          <a class="btn btn-primary btn-lg" href="http://wireless.subsignal.org/index.php?title=Schnelleinstieg">Jetzt Mitfunken &raquo;</a>
+          <a class="btn btn-warning btn-lg" href="/contact.php">Hilfe bekommen &raquo;</a>
+        </p>
+        
+      </div>
+    </div>
+
+    <!-- hier beginnt die eigentliche seite -->
+    <div class="container">
+
+      <!-- main reihe blöcke - content/ad -->
+      <div class="row">
+    
+        <div class="col-sm-10">
+    
+          <!-- eine reihe content blöcke -->
+          <div class="row">
+    
+            <!-- ein halber block (12/6=1/2) -->
+            <div class="col-sm-6">
+              <h2 class="page-header">Aktuelle Meldungen</h2>
+              <!-- dyn: news-liste -->
+              <ul><li> 20. Jun 13 - Neue <a target=_blank href="http://map.weimarnetz.de" class="external text" rel="nofollow">Karte</a> aufgebaut, sie soll mit anderen Freifunkcommunities synchonisiert werden
+</li><li> 6. Jun 13 - Unser neue <a target=_blank href="http://reg.weimarnetz.de" class="external text" rel="nofollow">Registrator</a> ist fertig und mit dem <a target=_blank href="http://meshkit.ja.ishalt.so" class="external text" rel="nofollow">Meshkit</a> verbunden
+</li><li> 20. Mai 13 - Routerkonfiguration ganz einfach mit dem <a target=_blank href="http://meshkit.ja.ishalt.so" class="external text" rel="nofollow">Meshkit</a>
+</li></ul>      
+              <p><a class="btn btn-xs btn-default" href="http://wireless.subsignal.org" target="_blank">Text bearbeiten &raquo;</a></p>
+            </div>
+    
+            <!-- ein halber block (12/6=1/2) -->
+            <div class="col-sm-6">
+              <h2 class="page-header">Aktuelle Diskussionen</h2>
+              <!-- dyn: discuss-liste -->
+              <ul>
+              <li><span class="np_thread_line_text"><span class="text-error">22.08.</span>: <a target=_blank href="http://news.weimarnetz.de/newsgroups/article.php?id=3349&amp;group=freifunk.de.weimar.discuss#3349">Kommunikation   u.a.: [Fwd: [WLANnews] Flyer für </a> <i>von Andreas Bräu</i></span></li><li><span class="np_thread_line_text"><span class="text-error">22.08.</span>: <a target=_blank href="http://news.weimarnetz.de/newsgroups/article.php?id=3355&amp;group=freifunk.de.weimar.discuss#3355">Freifunk styles usw.</a> <i>von Andreas Bräu</i></span></li><li><span class="np_thread_line_text"><span>21.08.</span>: <a target=_blank href="http://news.weimarnetz.de/newsgroups/article.php?id=3357&amp;group=freifunk.de.weimar.discuss#3357">Geldkassette   für die Handkasse ist bestellt</a> <i>von cstorch</i></span></li><li><span class="np_thread_line_text"><span>19.08.</span>: <a target=_blank href="http://news.weimarnetz.de/newsgroups/article.php?id=3331&amp;group=freifunk.de.weimar.discuss#3331">registrator: eine knotennummer  wieder freigeben</a> <i>von cstorch</i></span></li><li><span class="np_thread_line_text"><span>19.08.</span>: <a target=_blank href="http://news.weimarnetz.de/newsgroups/article.php?id=3346&amp;group=freifunk.de.weimar.discuss#3346">Naechstes Treffen am: Dienstag, 20. August 2013, O</a> <i>von Weimarnetz Wiki</i></span></li></ul>
+              <p><a class="btn btn-xs btn-default" href="./news.php" target="_blank" >Direkt zum Newsserver</a> <small>(Benutzer: <code>freifunk</code> Passwort: <code>weimar</code>)</small></p>
+            </div>
+   
+          </div> <!-- ende reihe -->
+
+          <!-- zweite reihe blöcke -->
+          <div class="row">
+
+            <div class="col-sm-6">
+              <h2 class="page-header">Spendenaufruf</h2>
+              <!-- dyn: spenden-liste -->
+              <ul><li> Das Weimarnetz ist auf Deine Spende angwiesen.
+</li><li> Als Spendenbetrag hat sich 5 Euro pro Person und Monat eingebürgert.
+</li><li> <b>Weimarnetz e.V. | KN: 365004871 | BLZ: 82051000 (Sparkasse Weimar)</b>
+</li></ul>      
+              <!-- paypal button -->
+              <ul><li>
+                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                  <span class="label label-primary" style="vertical-align:text-top">PayPal:</span> 
+                  <input type="hidden" name="cmd" value="_s-xclick">
+                  <input type="hidden" name="hosted_button_id" value="MN595Q3HPXZVY">
+                  <input type="image" src="https://www.paypalobjects.com/de_DE/DE/i/btn/btn_donateCC_LG.gif" name="submit" alt="Jetzt einfach, schnell und sicher online bezahlen – mit PayPal.">
+                  <img alt="" src="https://www.paypalobjects.com/de_DE/i/scr/pixel.gif" width="1" height="1">
+                </form>
+              </li></ul>
+      
+              <!-- <p><a class="btn btn-default" href="#">View details &raquo;</a></p> -->
+            </div>
+    
+          </div> <!-- ende reihe -->
+
+        </div> <!-- ende content -->
+    
+        <div class="col-sm-2" style="text-align:right">
+          <h2 class="page-header"><small class="text-muted">Werbung</small></h2>
+          <!-- mindfactory banner -->
+          <img src="holder.js/120x500" width="120" height="500" alt="Ihre Hardware stößt an ihre Grenzen? Zeit für ein Upgrade! www.mindfactory.de" usemap="#admap" />
+          <map name="admap">
+            <!-- #$-:Image map file created by GIMP Image Map plug-in -->
+            <!-- #$-:GIMP Image Map plug-in by Maurits Rijk -->
+            <!-- #$-:Please do not edit lines starting with "#$" -->
+            <!-- #$VERSION:2.3 -->
+            <!-- #$AUTHOR:Unknown -->
+            <area alt="shop" shape="rect" coords="3,413,116,438" target="_blank" href="http://www.mindfactory.de" />
+          </map>
+        </div>
+      
+      </div> <!-- ende main -->
+
+      <footer class="row">
+  <hr>
+  <div class="col-sm-2">
+    <p>
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/de/"><img alt="Creative Commons Lizenzvertrag" src="holder.js/100x60" /></a>
+    </p>
+  </div>
+  <div class="col-sm-10">
+    <p><span property="dct:title" rel="dct:type">Homepage Weimarnetz e.V.</span> von <span  property="cc:attributionName">Weimarnetz e.V.</span> steht unter der Lizenz:
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/de/">Creative Commons Namensnennung-Nicht-kommerziell-Weitergabe unter gleichen Bedingungen 3.0 Deutschland</a>.
+    </p>
+    <p>Beruht auf einem Inhalt unter <a href="http://www.weimarnetz.de" rel="dct:source">www.weimarnetz.de</a>
+    </p>
+  </div>
+</footer>
+  
+    </div> <!-- ende inhalt /container -->
+
+
+    <!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+<script type="text/javascript" src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="http://imsky.github.io/holder//holder.js"></script>
+  </body>
+</html>

@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+ <meta charset="utf-8">
+ <title>Captive</title>
+ <!--[if lt IE 9]><script src="/luci-static/bootstrap/html5.js"></script><![endif]-->
+ <meta name="viewport" content="initial-scale=1.0">
+ <link href="../dist/css/bootstrap.css" rel="stylesheet"> 
+ <link href="../bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet"> 
+ <!-- <link rel="shortcut icon" href="/luci-static/bootstrap/favicon.ico"> -->
+<!-- <script src="/luci-static/resources/xhr.js"></script> -->
+</head>
+
+<body class="fixed-nav">
+  
+  <!-- NAV -->
+
+  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>      
+      
+      <div class="navbar-brand btn-group btn-group-xs">
+        
+        <a class="btn btn-primary" href="#"><b># ALi23</b></a>
+
+        <div class="btn-group btn-group-xs">
+          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+            
+            <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu">
+            <li><a href="#">Weimarnetz.de</a></li>
+            <li><a href="#">Knoten im Wiki</a></li>
+          </ul>
+        </div>
+        
+        <a href="/cgi-bin/luci/freifunk/" class="active btn btn-primary">Freifunk</a>
+        <a href="/cgi-bin/luci/admin/" class="btn btn-warning">Admin</a>
+        
+      </div>
+    </div>
+      
+      <!-- <ul class="nav navbar-nav">
+      <li ><>Freifunk</a></li>
+      <li><>Administration</a></li>
+      </ul> -->
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav">
+        <li>
+          <a href="/cgi-bin/luci/freifunk/index">Overview</a>
+        </li>
+
+        <li>
+          <a href="/cgi-bin/luci/freifunk/contact">Contact</a>
+        </li>
+
+        <li class="dropdown">
+          <a href="/wiki.php" class="dropdown-toggle" data-toggle="dropdown">Status <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a class="menu" href="/cgi-bin/luci/freifunk/status">Status</a></li>
+            <li><a href="/cgi-bin/luci/freifunk/status/zeroes">Testdownload</a></li>
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a href="/cgi-bin/luci/freifunk/olsr" class="dropdown-toggle" data-toggle="dropdown">OLSR <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a class="menu" href="/cgi-bin/luci/freifunk/olsr">OLSR</a>
+            <li><a href="/cgi-bin/luci/freifunk/olsr/neighbors">Neighbours</a></li>
+            <li><a href="/cgi-bin/luci/freifunk/olsr/routes">Routes</a></li>
+            <li><a href="/cgi-bin/luci/freifunk/olsr/topology">Topology</a></li>
+            <li><a href="/cgi-bin/luci/freifunk/olsr/hna">HNA</a></li>
+            <li><a href="/cgi-bin/luci/freifunk/olsr/mid">MID</a></li>
+            <li><a href="/cgi-bin/luci/freifunk/olsr/interfaces">Interfaces</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="/cgi-bin/luci/freifunk/map">Map</a>
+        </li>
+
+        <li>
+          <a href="/cgi-bin/luci/freifunk/services">Services</a>
+        </li>
+
+      </ul>
+    </div>
+  
+  </nav>
+
+
+  <div class="alert alert-success alert-dismissable">   
+    <div class="container">
+
+      <div class="row">
+        <h2>Dein Internetzugang via Weimarnetz</h2>
+
+        <p>Der Zugang <strong>zum Internet</strong> &uuml;ber das Weimarnetz unterliegt unseren
+          <a href="/cgi-bin/luci/freifunk/captive?REDIRECTED=1&amp;FORM_SHOW_RULES=true" title="ausf&uuml;hrliche Informationen zu den Vertragsbedingungen"><strong>Nutzungsbedingungen!</strong></a> 
+          <br>
+          <small>(<a href='http://10.63.178.1/cgi-bin-welcome.sh?REDIRECTED=1&amp;FORM_LANG=de' hreflang='de' title='diese Seite in deutsch anzeigen'>Deutsch</a> / <a href='http://10.63.178.1/cgi-bin-welcome.sh?REDIRECTED=1&amp;FORM_LANG=en' hreflang='en' title='Show this page in English'>English </a> / <a href='http://10.63.178.1/cgi-bin-welcome.sh?REDIRECTED=1&amp;FORM_LANG=fre' hreflang='fr' title='afficher cette page en français'>Fran&ccedil;ais</a>)
+          </small>
+        </p>
+        <p>
+          Du musst bestätigen das du diese Bedingungen akzeptierst.  <small>Dann hast Du auch Zugriff auf die Meldungen und Diskussionen.</small>
+        </p>
+    
+        <form role="form">
+          <label for="accept_terms" class="btn btn-lg btn-warning btn-toggle"><b>1.</b> 
+            <input type="checkbox" id="accept_terms" name="FORM_RULES"> Akzeptieren 
+          </label>
+
+          <a href="weimarnetz.html" class="btn btn-lg btn-success"><b>2.</b> <i class="icon-circle-arrow-right"><kbd class="sr-only">=></kbd></i> Internet starten</a>
+        </form>
+    
+        <!-- non-lawer-approved one-click-button
+          <p>
+          Du musst bestätigen das du diese Bedingungen akzeptierst, indem du unten auf den Knopf drückst. <small>Dann hast Du auch Zugriff auf die Meldungen und Diskussionen.</small>
+          </p>
+          <button class="btn btn-lg btn-success">
+          &#x2714; Akzeptieren und Internet starten
+          </button>
+          -->
+    
+          <hr>
+        </div>
+ 
+    <div class="row">
+      <h2>Dein freundlicher Nachbar</h2>
+    
+        <p>Dieser n&auml;chstgelegene Knoten verbindet dich mit dem Weimarnetz.</p>
+        
+        <div class="panel panel-default panel-center">
+          <div class="panel-heading">
+            <h3 class="panel-title"><a class="btn btn-lg btn-" href="#"># T65</a></h3>
+          </div>
+          <div class="panel-body">
+            <a href="#">
+              <img class="img-thumbnail" id="logo" src="http://wireless.subsignal.org/images/4/4a/Node62.jpg" title="Weimarnetz" alt="Weimarnetz">
+              </a>
+          </div>
+          <div class="panel-footer">[Knoteninfo]</div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+    <!-- hier beginnt die eigentliche seite -->
+    <div class="container">
+
+          <!-- eine reihe content blöcke -->
+          <div class="row">
+            
+            <!-- TODO: img -->
+            <div class="col-sm-12">
+            </div>
+              
+    
+            <!-- ein halber block (12/6=1/2) -->
+            <div class="col-sm-6">
+              <h2 class="page-header">Aktuelle Meldungen</h2>
+              <!-- dyn: news-liste -->
+              <ul><li>
+Meldungen werden geladen. Falls nicht, hast Du entweder Javascript im Browser deaktiviert oder Dir steht kein Internet zur Verf&uuml;gung.
+
+</li></ul>      
+            </div>
+    
+            <!-- ein halber block (12/6=1/2) -->
+            <div class="col-sm-6">
+              <h2 class="page-header">Aktuelle Diskussionen</h2>
+              <!-- dyn: discuss-liste -->
+              <ul>
+                <li>
+                Diskussionen werden geladen. Falls nicht, hast Du entweder Javascript deaktiviert oder Dir steht kein Internet zur Verfuegung.
+
+                </li></ul>
+              <p><a class="btn btn-xs btn-default" href="./news.php" target="_blank" >Direkt zum Newsserver</a> <small>(Benutzer: <code>freifunk</code> Passwort: <code>weimar</code>)</small></p>
+            </div>
+   
+          </div> <!-- ende reihe -->
+
+          <!-- zweite reihe blöcke -->
+          <div class="row">
+
+            <div class="col-sm-6">
+              <h2 class="page-header">Spendenaufruf</h2>
+              <!-- dyn: spenden-liste -->
+              <ul><li>
+Informationen zu Spenden werden geladen. Falls nicht, hast Du entweder Javascript deaktiviert oder Dir steht kein Internet zur Verfuegung.
+
+</li></ul>      
+              <!-- paypal button -->
+              <ul><li>
+                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                  <span class="label label-primary" style="vertical-align:text-top">PayPal:</span> 
+                  <input type="hidden" name="cmd" value="_s-xclick">
+                  <input type="hidden" name="hosted_button_id" value="MN595Q3HPXZVY">
+                  <input type="image" src="https://www.paypalobjects.com/de_DE/DE/i/btn/btn_donateCC_LG.gif" name="submit" alt="Jetzt einfach, schnell und sicher online bezahlen – mit PayPal.">
+                  <img alt="" src="https://www.paypalobjects.com/de_DE/i/scr/pixel.gif" width="1" height="1">
+                </form>
+              </li></ul>
+      
+              <!-- <p><a class="btn btn-default" href="#">View details &raquo;</a></p> -->
+            </div>
+    
+          </div> <!-- ende reihe -->
+      
+      </div> <!-- ende main -->
+
+<!-- SCRIPTS -->
+      <script type="text/javascript">//<!
+      [CDATA[
+
+      function removeLinks(text)
+
+      {
+
+              text = text.replace(/(<a
+      ([^>]+)>)/gi, "");
+
+              return text.replace(/<\
+      /a>/gi, "");
+
+      }
+
+
+      function removeSpan(text)
+
+      {
+
+              text = text.replace(/(<s
+      pan.*\/span>)/gi, "");
+
+              return text.replace(/<\
+      /h.>/gi, "");
+
+      }
+
+
+      function removeHeadlines(text)
+
+      {
+
+              text = text.replace(/(<h
+      ([^>]+)>)/gi, "");
+
+              return text.replace(/<\
+      /h.>/gi, "");
+
+      }
+
+      function removeComments(text)
+
+      {
+
+              return text.replace(/(<\
+      !--([^>]+)-->)/gi, "");
+
+      }
+
+      function loadDiscussions()
+
+      {
+
+              var xmlhttp;
+
+              var discussions;
+
+              if (window.XMLHttpRequest)
+
+              {// code for IE7+, Firefox, Chrome, Opera, Safari
+
+                      xmlhttp=new XMLHttpRequest();
+
+              }
+
+              else
+
+              {// code for IE6, IE5
+
+                      xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+
+              }
+
+              xmlhttp.open("GET","http://www.weimarnetz.de/latestnews.html",false);
+
+              xmlhttp.send();
+
+              discussions = removeLinks(xmlhttp.responseText);
+
+              document.getElementById("discussions").innerHTML=discussions;
+
+      }
+
+
+      function loadNews(data)
+
+      {
+
+              var news = data.parse.text['*'];
+
+              news = removeHeadlines(news);
+
+              news = removeSpan(news);
+
+              news = removeLinks(news);
+
+              news = removeComments(news);
+
+              //remove page specific part: aeltere Ankuendigungen
+
+              news = news.replace(/<ul.+<\/small>\n<\/li><\
+      /ul>/gi, "");
+
+              document.getElementById("news").innerHTML=news;
+
+              console.log(news);
+
+      }
+
+      function loadFunds(data)
+
+      {
+
+              var funds = data.parse.text['*'];
+
+              funds = removeHeadlines(funds);
+
+              funds = removeSpan(funds);
+
+              funds = removeLinks(funds);
+
+              funds = removeComments(funds);
+
+              document.getElementById("funds").innerHTML=funds;
+
+              console.log(funds);
+
+      }
+
+      function loadLogo(data)
+
+      {
+
+              var logo = data.query.pages;
+
+              var length = Object.keys(logo).length;
+
+              if (length = 1)
+
+              {
+
+                      for(id in logo)
+
+                      {
+
+                              myLogo = logo[id]['imageinfo'][0]['url'];
+
+                              console.log(myLogo);
+
+                              document.getElementById("logo").src=myLogo;
+
+                      }
+
+              }
+
+      }
+
+      console.log(document.URL);
+
+      document.getElementById("enabled").innerHTML="<br/><br/>Schon freigeschaltet? Hier gehts zur Ursprungsseite: <a href=\"" + document.URL + "\">" + document.URL + "</a
+      >";
+
+      loadDiscussions();
+
+      //]]></script>
+      <script type="application/javascript" src="http://wireless.subsignal.org/api.php?format=json&amp;action=parse&amp;page=Vorlage:Startseite.Aktuelles&amp;prop=text&amp;callback=loadNews"></script>
+      <script type="application/javascript" src="http://wireless.subsignal.org/api.php?format=json&amp;action=parse&amp;page=Vorlage:Spendenaufruf&amp;prop=text&amp;callback=loadFunds"></script>
+      <script type="application/javascript" src="http://wireless.subsignal.org/api.php?format=json&amp;action=query&amp;titles=Datei:Node107.jpg&amp;prop=imageinfo&amp;iiprop=url&amp;disablepp&amp;redirects&amp;callback=loadLogo"></script>
+      
+      <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+  <script type="text/javascript" src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+  <script src="http://imsky.github.io/holder//holder.js"></script>
+    </body>
+  </html>
