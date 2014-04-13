@@ -81,7 +81,11 @@ p.lead {
 }
 
 .well, .jumbotron {
-  text-shadow: 1px 1px 0px hsla(0,0%,100%,.3);
+  text-shadow: 0.04em 0.04em 0px hsla(0,0%,100%,.2);
+  
+  &.alert {
+    text-shadow: 0.04em 0.04em 0px hsla(0,0%,0%,.2);
+  }
 }
 
 a[class$="-brand"] {
