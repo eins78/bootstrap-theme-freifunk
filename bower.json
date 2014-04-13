@@ -1,7 +1,7 @@
 {
   "name": "bootstrap-theme-freifunk",
   "author": "Max F. Albrecht",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "themestrap": {
     "name": "Freifunk",
     "repo": "git://github.com/eins78/freifunk"
