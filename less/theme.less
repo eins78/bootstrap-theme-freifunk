@@ -130,12 +130,21 @@ footer {
 /* ALERTS*/
 .alert {
   border-width: 3px;
-  border-color: @ff-Md;
+  // disable box-shadow from theme
+  @shadow: none;
+  .box-shadow(@shadow);
+  
+  &, p, small {
+    > .alert-link, > :link {
+      color: inherit;
+      text-decoration: underline;
+      font-weight: @alert-link-font-weight;
+    }
+  }
 }
 .close,
 .alert > .close {
-  color: @ff-Md;
-  .opacity(.75);
+  .opacity(1.0);
 
   &:hover,
   &:focus {
@@ -144,7 +153,20 @@ footer {
   }
 
 }
-
+// override mixin!
+.alert-variant(@background; @border; @text-color) {
+  background-color: @background;
+  border-color: @border;
+  color: @text-color;
+  
+  > .close {
+    color: @border;
+  }
+  
+  hr {
+    border-top-color: @border;
+  }
+}
 
 /* - PANELS - */
 
@@ -217,6 +239,37 @@ footer {
   }
 }
 
+// override mixin!
+.table-row-variant(@state; @background; @border; @text-color) {
+  .table > thead > tr,
+  .table > tbody > tr,
+  .table > tfoot > tr {
+    > td.@{state},
+    > th.@{state},
+    &.@{state} > td,
+    &.@{state} > th {
+      color: @text-color;
+      background-color: @background;
+      border-color: @border;
+    }
+  }
+.table-hover > tbody > tr {
+    > td.@{state}:hover,
+    > th.@{state}:hover,
+    &.@{state}:hover > td {
+      color: @text-color;
+      background-color: darken(@background, 5%);
+      border-color: darken(@border, 5%);
+    }
+  }
+}
+
+// make contextual variants - with normal border-color!
+.table-row-variant(success; @state-success-bg; @table-border-color; @state-success-text-light);
+.table-row-variant(danger; @state-danger-bg; @table-border-color; @state-danger-text-light);
+.table-row-variant(warning; @state-warning-bg; @table-border-color; @state-warning-text-light);
+
+
 /* --- THEME SPECIALS --- */
 
 body {
@@ -234,12 +287,6 @@ body.fixed-nav {
   border-width: 0 0 3px 0;
   border-radius: 0;
   margin-bottom: 0;
-  
-  &.alert-success {
-    color: @alert-success-text;
-    background-color: @alert-success-bg;
-    border-color: @alert-success-text;
-  }
 }
 
 
