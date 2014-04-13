@@ -287,6 +287,21 @@ hr {
 
 /* --- THEME SPECIALS --- */
 
+// even bigger buttons
+.btn-xlg {
+  // line-height: ensure even-numbered height of button next to large input
+  .button-size(@padding-large-vertical*1.4; @padding-large-horizontal*1.4; @font-size-large*1.4; @line-height-large*1.4; @border-radius-large*1.4);
+}
+.btn-xxlg {
+  // line-height: ensure even-numbered height of button next to large input
+  .button-size(@padding-large-vertical*1.6; @padding-large-horizontal*1.6; @font-size-large*1.6; @line-height-large*1.6; @border-radius-large*1.6);
+}
+.btn-xxxlg {
+  // line-height: ensure even-numbered height of button next to large input
+  .button-size(@padding-large-vertical*2; @padding-large-horizontal*2; @font-size-large*2; @line-height-large*2; @border-radius-large*2);
+}
+
+
 body {
   padding-bottom: 50px;  
 }
