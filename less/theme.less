@@ -112,6 +112,7 @@ blockquote {
 
 /* space out buttons inside jumbotrons */
 .jumbotron {
+  font-size: 1.67em;
   .btn {
     margin: 0.5em 0.5em 0 0;  }
 }
@@ -146,25 +147,27 @@ hr {
   @shadow: none;
   .box-shadow(@shadow);
   
-  &, p, small {
+  // content links in alerts
+  &, p, small, ul, ol, dl {
     > .alert-link, > :link {
       color: inherit;
       text-decoration: underline;
       font-weight: @alert-link-font-weight;
     }
   }
-}
-.close,
-.alert > .close {
-  .opacity(1.0);
-
-  &:hover,
-  &:focus {
-
+  
+  &.close,
+  & > .close {
     .opacity(1.0);
-  }
 
+    &:hover,
+    &:focus {
+
+      .opacity(1.0);
+    }
+  }
 }
+
 // override mixin!
 .alert-variant(@background; @border; @text-color) {
   background-color: @background;
