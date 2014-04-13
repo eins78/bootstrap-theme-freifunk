@@ -67,4 +67,4 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks('assemble')
 
   grunt.registerTask('default', ['copy', 'less', 'recess', 'cssmin', 'assemble', 'clean'])
-  grunt.registerTask('serve', ['connect', 'watch'])
+  grunt.registerTask('serve', ['default', 'connect', 'watch'])
